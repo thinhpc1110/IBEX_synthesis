@@ -1,1 +1,3 @@
-Đây là các file rtl cần thiết cho việc tổng hợp thiết kế IBEX
+Đây là các file rtl cần thiết cho việc tổng hợp thiết kế IBEX, trong quá trình tổng hợp có thể sinh ra khá 
+nhieu loi liên quan đến syntax của RTL, đây có thể liên quan đến việc thiếu file cungx như import package thiếu trong moi
+module con.
