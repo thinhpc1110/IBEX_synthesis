@@ -1,0 +1,189 @@
+Cadence Genus(TM) Synthesis Solution.
+Copyright 2023 Cadence Design Systems, Inc. All rights reserved worldwide.
+Cadence and the Cadence logo are registered trademarks and Genus is a trademark
+of Cadence Design Systems, Inc. in the United States and other countries.
+
+[23:05:00.445777] Configured Lic search path (21.01-s002): 5280@192.168.32.10
+
+Version: 22.12-s082_1, built Sat May 06 04:39:19 PDT 2023
+Options: 
+Date:    Wed Aug 21 23:05:00 2024
+Host:    edabk.server1 (x86_64 w/Linux 3.10.0-1160.108.1.el7.x86_64) (24cores*48cpus*2physical cpus*AMD EPYC 7402 24-Core Processor 512KB) (395944776KB)
+PID:     39990
+OS:      CentOS Linux release 7.9.2009 (Core)
+
+Checking out license: Genus_Synthesis
+[23:05:01.053987] Periodic Lic check successful
+[23:05:01.054001] Feature usage summary:
+[23:05:01.054002] Genus_Synthesis
+
+
+
+***********************************************************************************************************
+***********************************************************************************************************
+
+
+
+Finished executable startup (3 seconds elapsed).
+
+Loading tool scripts...
+Finished loading tool scripts (12 seconds elapsed).
+
+WARNING: This version of the tool is 473 days old.
+@genus:root: 1> source genus_script_IBEX_ICGC.tcl
+Sourcing './genus_script_IBEX_ICGC.tcl' (Wed Aug 21 23:05:34 +07 2024)...
+#@ Begin verbose source ./genus_script_IBEX_ICGC.tcl
+@file(genus_script_IBEX_ICGC.tcl) 2: set fd_sclib ../../sky130_fd_sc_hd/lib
+@file(genus_script_IBEX_ICGC.tcl) 3: set osu_t18lib ../../sky130_osu_sc_t18/18T_hs/lib
+@file(genus_script_IBEX_ICGC.tcl) 4: set_db init_lib_search_path [list $fd_sclib $osu_t18lib ]
+  Setting attribute of root '/': 'init_lib_search_path' = ../../sky130_fd_sc_hd/lib ../../sky130_osu_sc_t18/18T_hs/lib
+@file(genus_script_IBEX_ICGC.tcl) 6: set search_path [list "./" ]
+@file(genus_script_IBEX_ICGC.tcl) 7: lappend search_path $fd_sclib
+@file(genus_script_IBEX_ICGC.tcl) 8: lappend search_path $osu_t18lib 
+@file(genus_script_IBEX_ICGC.tcl) 9: lappend search_path /home/usr8/work_space/sky130_cds/synth/rtl-IBEX
+@file(genus_script_IBEX_ICGC.tcl) 12: set_db init_hdl_search_path $search_path
+  Setting attribute of root '/': 'init_hdl_search_path' = ./ ../../sky130_fd_sc_hd/lib ../../sky130_osu_sc_t18/18T_hs/lib /home/usr8/work_space/sky130_cds/synth/rtl-IBEX
+@file(genus_script_IBEX_ICGC.tcl) 15: read_libs [list sky130_fd_sc_hd__tt_100C_1v80.lib sky130_osu_sc_18T_hs_tt_1P80_100C.ccs.lib]
+
+  Message Summary for Library both libraries:
+  *******************************************
+  An unsupported construct was detected in this library. [LBR-40]: 13
+  *******************************************
+ 
+Info    : Created nominal operating condition. [LBR-412]
+        : Operating condition '_nominal_' was created for the PVT values (1.000000, 1.800000, 100.000000) in library 'sky130_fd_sc_hd__tt_100C_1v80.lib'.
+        : The nominal operating condition is represented, either by the nominal PVT values specified in the library source (via nom_process,nom_voltage and nom_temperature respectively), or by the default PVT values (1.0,1.0,1.0).
+Info    : Created nominal operating condition. [LBR-412]
+        : Operating condition '_nominal_' was created for the PVT values (1.000000, 1.800000, 100.000000) in library 'sky130_osu_sc_18T_hs_tt_1P80_100C.ccs.lib'.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'sky130_osu_sc_18T_hs__ant' must have an output pin.
+        : Add the missing output pin(s), then reload the library. Else the library cell will be marked as timing model i.e. unusable. Timing_model means that the cell does not have any defined function. If there is no output pin, Genus will mark library cell as unusable i.e. the attribute 'usable' will be marked to 'false' on the libcell. Therefore, the cell is not used for mapping and it will not be picked up from the library for synthesis. If you query the attribute 'unusable_reason' on the libcell; result will be: 'Library cell has no output pins.'Note: The message LBR-9 is only for the logical pins and not for the power_ground pins. Genus will depend upon the output function defined in the pin group (output pin) of the cell, to use it for mapping. The pg_pin will not have any function defined.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'sky130_osu_sc_18T_hs__ant' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'sky130_fd_sc_hd__decap_12' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'sky130_fd_sc_hd__decap_12' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'sky130_fd_sc_hd__decap_3' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'sky130_fd_sc_hd__decap_3' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'sky130_fd_sc_hd__decap_4' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'sky130_fd_sc_hd__decap_4' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'sky130_fd_sc_hd__decap_6' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'sky130_fd_sc_hd__decap_6' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'sky130_fd_sc_hd__decap_8' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'sky130_fd_sc_hd__decap_8' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'sky130_fd_sc_hd__diode_2' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'sky130_fd_sc_hd__diode_2' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'sky130_fd_sc_hd__lpflow_bleeder_1' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'sky130_fd_sc_hd__lpflow_bleeder_1' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'sky130_fd_sc_hd__lpflow_decapkapwr_12' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'sky130_fd_sc_hd__lpflow_decapkapwr_12' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'sky130_fd_sc_hd__lpflow_decapkapwr_3' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'sky130_fd_sc_hd__lpflow_decapkapwr_3' must have an output pin.
+Warning : Maximum message print count reached. [MESG-11]
+        : Maximum print count of '20' reached for message 'LBR-9'.
+@file(genus_script_IBEX_ICGC.tcl) 19: set my_verilog_files [list prim_assert.sv ibex_alu.sv ibex_branch_predict.sv ibex_compressed_decoder.sv ibex_controller.sv ibex_cs_registers.sv ibex_csr.sv ibex_counter.sv ibex_decoder.sv ibex_ex_block.sv ibex_fetch_fifo.sv ibex_id_stage.sv ibex_if_stage.sv ibex_load_store_unit.sv ibex_multdiv_fast.sv ibex_multdiv_slow.sv ibex_prefetch_buffer.sv ibex_pmp.sv ibex_wb_stage.sv ibex_dummy_instr.sv ibex_core.sv] 
+@file(genus_script_IBEX_ICGC.tcl) 20: set my_toplevel "ibex_core"
+@file(genus_script_IBEX_ICGC.tcl) 23: set_db lp_insert_clock_gating true 
+  Setting attribute of root '/': 'lp_insert_clock_gating' = true
+@file(genus_script_IBEX_ICGC.tcl) 24: set_db lp_clock_gating_prefix string
+  Setting attribute of root '/': 'lp_clock_gating_prefix' = string
+@file(genus_script_IBEX_ICGC.tcl) 25: set_db design_power_effort high
+  Setting attribute of root '/': 'design_power_effort' = high
+@file(genus_script_IBEX_ICGC.tcl) 31: read_hdl -language sv  $my_verilog_files
+Warning : Cannot open file. [VLOGPT-650]
+        : File 'prim_assert.sv'.
+        : The specified file could not be opened.  Check the value of the init_hdl_search_path attribute.
+Warning : Cannot open file. [VLOGPT-650]
+        : File 'ibex_alu.sv'.
+Warning : Cannot open file. [VLOGPT-650]
+        : File 'ibex_branch_predict.sv'.
+Warning : Cannot open file. [VLOGPT-650]
+        : File 'ibex_compressed_decoder.sv'.
+Warning : Cannot open file. [VLOGPT-650]
+        : File 'ibex_controller.sv'.
+Warning : Cannot open file. [VLOGPT-650]
+        : File 'ibex_cs_registers.sv'.
+Warning : Cannot open file. [VLOGPT-650]
+        : File 'ibex_csr.sv'.
+Warning : Cannot open file. [VLOGPT-650]
+        : File 'ibex_counter.sv'.
+Warning : Cannot open file. [VLOGPT-650]
+        : File 'ibex_decoder.sv'.
+Warning : Cannot open file. [VLOGPT-650]
+        : File 'ibex_ex_block.sv'.
+Warning : Cannot open file. [VLOGPT-650]
+        : File 'ibex_fetch_fifo.sv'.
+Warning : Cannot open file. [VLOGPT-650]
+        : File 'ibex_id_stage.sv'.
+Warning : Cannot open file. [VLOGPT-650]
+        : File 'ibex_if_stage.sv'.
+Warning : Cannot open file. [VLOGPT-650]
+        : File 'ibex_load_store_unit.sv'.
+Warning : Cannot open file. [VLOGPT-650]
+        : File 'ibex_multdiv_fast.sv'.
+Warning : Cannot open file. [VLOGPT-650]
+        : File 'ibex_multdiv_slow.sv'.
+Warning : Cannot open file. [VLOGPT-650]
+        : File 'ibex_prefetch_buffer.sv'.
+Warning : Cannot open file. [VLOGPT-650]
+        : File 'ibex_pmp.sv'.
+Warning : Cannot open file. [VLOGPT-650]
+        : File 'ibex_wb_stage.sv'.
+Warning : Cannot open file. [VLOGPT-650]
+        : File 'ibex_dummy_instr.sv'.
+Warning : Maximum message print count reached. [MESG-11]
+        : Maximum print count of '20' reached for message 'VLOGPT-650'.
+@file(genus_script_IBEX_ICGC.tcl) 32: elaborate $my_toplevel
+Warning : Libcell will be treated as a timing model. [LBR-158]
+        : Lib_pin 'sky130_osu_sc_18T_hs__buf_6/Y' has no incoming arcs.
+        : Ensure that the relevant timing arcs are defined in the Liberty model of the libcell.
+  Libraries have 371 usable logic and 70 usable sequential lib-cells.
+Warning : Non-monotonic wireload model found. [LBR-81]
+        : 'Length' table in wireload model 'Huge' is non-monotonic.
+        : Non-monotonic wireload models can cause problems during synthesis and/or mapping.  Raising some of the points in the curve to give it a monotonic shape.
+Warning : Non-monotonic wireload model found. [LBR-81]
+        : 'Length' table in wireload model 'Huge' is non-monotonic.
+Warning : Non-monotonic wireload model found. [LBR-81]
+        : 'Length' table in wireload model 'Huge' is non-monotonic.
+Warning : Non-monotonic wireload model found. [LBR-81]
+        : 'Length' table in wireload model 'Large' is non-monotonic.
+Warning : Non-monotonic wireload model found. [LBR-81]
+        : 'Length' table in wireload model 'Large' is non-monotonic.
+Warning : Non-monotonic wireload model found. [LBR-81]
+        : 'Length' table in wireload model 'Large' is non-monotonic.
+Warning : Non-monotonic wireload model found. [LBR-81]
+        : 'Length' table in wireload model 'Medium' is non-monotonic.
+Warning : Non-monotonic wireload model found. [LBR-81]
+        : 'Length' table in wireload model 'Medium' is non-monotonic.
+Warning : Non-monotonic wireload model found. [LBR-81]
+        : 'Length' table in wireload model 'Medium' is non-monotonic.
+Warning : Non-monotonic wireload model found. [LBR-81]
+        : 'Length' table in wireload model 'Small' is non-monotonic.
+Warning : Non-monotonic wireload model found. [LBR-81]
+        : 'Length' table in wireload model 'Small' is non-monotonic.
+Warning : Non-monotonic wireload model found. [LBR-81]
+        : 'Length' table in wireload model 'Small' is non-monotonic.
+Error   : Could not find an HDL design. [CDFG-210] [elaborate]
+        : The design is 'ibex_core'.
+        : This error may happen if you read a set of files, and you try to elaborate a design which description is not part of the files read. To fix this, check the name of the design you want to elaborate, or check if you have read all the expected RTL files.
+UM:   flow.cputime  flow.realtime  timing.setup.tns  timing.setup.wns  snapshot
+UM:*                                                                   elaborate
+#@ End verbose source ./genus_script_IBEX_ICGC.tcl
+1

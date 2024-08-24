@@ -1,0 +1,294 @@
+Cadence Genus(TM) Synthesis Solution.
+Copyright 2023 Cadence Design Systems, Inc. All rights reserved worldwide.
+Cadence and the Cadence logo are registered trademarks and Genus is a trademark
+of Cadence Design Systems, Inc. in the United States and other countries.
+
+[08:52:47.445905] Configured Lic search path (21.01-s002): 5280@192.168.32.10
+
+Version: 22.12-s082_1, built Sat May 06 04:39:19 PDT 2023
+Options: 
+Date:    Thu Aug 01 08:52:47 2024
+Host:    edabk.server1 (x86_64 w/Linux 3.10.0-1160.108.1.el7.x86_64) (24cores*48cpus*2physical cpus*AMD EPYC 7402 24-Core Processor 512KB) (395944780KB)
+PID:     49110
+OS:      CentOS Linux release 7.9.2009 (Core)
+
+Checking out license: Genus_Synthesis
+[08:52:48.091978] Periodic Lic check successful
+[08:52:48.092000] Feature usage summary:
+[08:52:48.092001] Genus_Synthesis
+
+
+
+***********************************************************************************************************
+***********************************************************************************************************
+
+
+
+Finished executable startup (3 seconds elapsed).
+
+Loading tool scripts...
+Finished loading tool scripts (11 seconds elapsed).
+
+WARNING: This version of the tool is 452 days old.
+@genus:root: 1> source genus_script_IBEX_ICGC.tcl
+Sourcing './genus_script_IBEX_ICGC.tcl' (Thu Aug 01 08:56:20 +07 2024)...
+#@ Begin verbose source ./genus_script_IBEX_ICGC.tcl
+@file(genus_script_IBEX_ICGC.tcl) 2: set fd_sclib ../../sky130_fd_sc_hd/lib
+@file(genus_script_IBEX_ICGC.tcl) 3: set osu_t18lib ../../sky130_osu_sc_t18/18T_hs/lib
+@file(genus_script_IBEX_ICGC.tcl) 4: set_db init_lib_search_path [list $fd_sclib $osu_t18lib ]
+  Setting attribute of root '/': 'init_lib_search_path' = ../../sky130_fd_sc_hd/lib ../../sky130_osu_sc_t18/18T_hs/lib
+@file(genus_script_IBEX_ICGC.tcl) 6: set search_path [list "./" ]
+@file(genus_script_IBEX_ICGC.tcl) 7: lappend search_path $fd_sclib
+@file(genus_script_IBEX_ICGC.tcl) 8: lappend search_path $osu_t18lib 
+@file(genus_script_IBEX_ICGC.tcl) 9: lappend search_path /home/usr8/work_space/sky130_cds/synth/rtl-IBEX
+@file(genus_script_IBEX_ICGC.tcl) 12: set_db init_hdl_search_path $search_path
+  Setting attribute of root '/': 'init_hdl_search_path' = ./ ../../sky130_fd_sc_hd/lib ../../sky130_osu_sc_t18/18T_hs/lib /home/usr8/work_space/sky130_cds/synth/rtl-IBEX
+@file(genus_script_IBEX_ICGC.tcl) 15: read_libs [list sky130_fd_sc_hd__tt_100C_1v80.lib sky130_osu_sc_18T_hs_tt_1P80_100C.ccs.lib]
+
+  Message Summary for Library both libraries:
+  *******************************************
+  An unsupported construct was detected in this library. [LBR-40]: 13
+  *******************************************
+ 
+Info    : Created nominal operating condition. [LBR-412]
+        : Operating condition '_nominal_' was created for the PVT values (1.000000, 1.800000, 100.000000) in library 'sky130_fd_sc_hd__tt_100C_1v80.lib'.
+        : The nominal operating condition is represented, either by the nominal PVT values specified in the library source (via nom_process,nom_voltage and nom_temperature respectively), or by the default PVT values (1.0,1.0,1.0).
+Info    : Created nominal operating condition. [LBR-412]
+        : Operating condition '_nominal_' was created for the PVT values (1.000000, 1.800000, 100.000000) in library 'sky130_osu_sc_18T_hs_tt_1P80_100C.ccs.lib'.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'sky130_osu_sc_18T_hs__ant' must have an output pin.
+        : Add the missing output pin(s), then reload the library. Else the library cell will be marked as timing model i.e. unusable. Timing_model means that the cell does not have any defined function. If there is no output pin, Genus will mark library cell as unusable i.e. the attribute 'usable' will be marked to 'false' on the libcell. Therefore, the cell is not used for mapping and it will not be picked up from the library for synthesis. If you query the attribute 'unusable_reason' on the libcell; result will be: 'Library cell has no output pins.'Note: The message LBR-9 is only for the logical pins and not for the power_ground pins. Genus will depend upon the output function defined in the pin group (output pin) of the cell, to use it for mapping. The pg_pin will not have any function defined.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'sky130_osu_sc_18T_hs__ant' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'sky130_fd_sc_hd__decap_12' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'sky130_fd_sc_hd__decap_12' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'sky130_fd_sc_hd__decap_3' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'sky130_fd_sc_hd__decap_3' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'sky130_fd_sc_hd__decap_4' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'sky130_fd_sc_hd__decap_4' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'sky130_fd_sc_hd__decap_6' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'sky130_fd_sc_hd__decap_6' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'sky130_fd_sc_hd__decap_8' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'sky130_fd_sc_hd__decap_8' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'sky130_fd_sc_hd__diode_2' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'sky130_fd_sc_hd__diode_2' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'sky130_fd_sc_hd__lpflow_bleeder_1' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'sky130_fd_sc_hd__lpflow_bleeder_1' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'sky130_fd_sc_hd__lpflow_decapkapwr_12' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'sky130_fd_sc_hd__lpflow_decapkapwr_12' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'sky130_fd_sc_hd__lpflow_decapkapwr_3' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'sky130_fd_sc_hd__lpflow_decapkapwr_3' must have an output pin.
+Warning : Maximum message print count reached. [MESG-11]
+        : Maximum print count of '20' reached for message 'LBR-9'.
+@file(genus_script_IBEX_ICGC.tcl) 19: set my_verilog_files [list ibex_pkg.sv ibex_alu.sv ibex_compressed_decoder.sv ibex_controller.sv ibex_counter.sv ibex_cs_registers.sv ibex_decoder.sv ibex_ex_block.sv ibex_id_stage.sv ibex_if_stage.sv ibex_load_store_unit.sv ibex_multdiv_slow.sv ibex_multdiv_fast.sv ibex_prefetch_buffer.sv ibex_fetch_fifo.sv ibex_register_file_ff.sv ibex_core.sv] 
+@file(genus_script_IBEX_ICGC.tcl) 20: set my_toplevel "ibex_core"
+@file(genus_script_IBEX_ICGC.tcl) 23: set_db lp_insert_clock_gating true 
+  Setting attribute of root '/': 'lp_insert_clock_gating' = true
+@file(genus_script_IBEX_ICGC.tcl) 24: set_db lp_clock_gating_prefix string
+  Setting attribute of root '/': 'lp_clock_gating_prefix' = string
+@file(genus_script_IBEX_ICGC.tcl) 25: set_db design_power_effort high
+  Setting attribute of root '/': 'design_power_effort' = high
+@file(genus_script_IBEX_ICGC.tcl) 31: read_hdl -language sv $my_verilog_files
+`include "prim_assert.sv"
+                        |
+Warning : Cannot open file. [VLOGPT-650]
+        : File 'prim_assert.sv' in file '/home/usr8/work_space/sky130_cds/synth/rtl-IBEX/ibex_compressed_decoder.sv' on line 14, column 25.
+        : The specified file could not be opened.  Check the value of the init_hdl_search_path attribute.
+  `ASSERT_KNOWN(IbexInstrValidKnown, valid_i)
+              |
+Error   : Reference to undefined macro. [VLOGPT-631] [read_hdl]
+        : Macro 'ASSERT_KNOWN' in file '/home/usr8/work_space/sky130_cds/synth/rtl-IBEX/ibex_compressed_decoder.sv' on line 286, column 15.
+        : Error encountered during Verilog parsing. Make sure all paths of include files have been specified in the init_hdl_search_path attribute. Also, check whether you need to specify the -define option of the read_hdl command.
+  (IbexInstrValidKnown, valid_i)
+  |
+Error   : Parsing error. [VLOGPT-1] [read_hdl]
+        : in file '/home/usr8/work_space/sky130_cds/synth/rtl-IBEX/ibex_compressed_decoder.sv' on line 286, column 3.
+        : Invalid Verilog syntax is parsed, or unsupported Verilog syntax is encountered.
+  (IbexInstrValidKnown, valid_i)
+  |
+Error   : Parsing error. [VLOGPT-1] [read_hdl]
+        : Expecting token ';', found '(' in file '/home/usr8/work_space/sky130_cds/synth/rtl-IBEX/ibex_compressed_decoder.sv' on line 286, column 3.
+  `ASSERT(IbexInstrLSBsKnown, valid_i |->
+        |
+Error   : Reference to undefined macro. [VLOGPT-631] [read_hdl]
+        : Macro 'ASSERT' in file '/home/usr8/work_space/sky130_cds/synth/rtl-IBEX/ibex_compressed_decoder.sv' on line 289, column 9.
+`include "prim_assert.sv"
+                        |
+Warning : Cannot open file. [VLOGPT-650]
+        : File 'prim_assert.sv' in file '/home/usr8/work_space/sky130_cds/synth/rtl-IBEX/ibex_controller.sv' on line 10, column 25.
+`include "dv_fcov_macros.svh"
+                            |
+Warning : Cannot open file. [VLOGPT-650]
+        : File 'dv_fcov_macros.svh' in file '/home/usr8/work_space/sky130_cds/synth/rtl-IBEX/ibex_controller.sv' on line 11, column 29.
+  assign load_err_d  = load_err_i;
+                       |
+Error   : Reference to undeclared variable. A variable/parameter must be declared before it is referenced. [VLOGPT-20] [read_hdl]
+        : Symbol 'load_err_i' in file '/home/usr8/work_space/sky130_cds/synth/rtl-IBEX/ibex_controller.sv' on line 188, column 24.
+        : Verilog module is using a parameter that is not defined in the module. You will get a notification for this, if you read the verilog file using the read_hdl command.
+  assign store_err_d = store_err_i;
+                       |
+Error   : Reference to undeclared variable. A variable/parameter must be declared before it is referenced. [VLOGPT-20] [read_hdl]
+        : Symbol 'store_err_i' in file '/home/usr8/work_space/sky130_cds/synth/rtl-IBEX/ibex_controller.sv' on line 189, column 24.
+  assign ecall_insn      = ecall_insn_i      & instr_valid_i;
+                           |
+Error   : Reference to undeclared variable. A variable/parameter must be declared before it is referenced. [VLOGPT-20] [read_hdl]
+        : Symbol 'ecall_insn_i' in file '/home/usr8/work_space/sky130_cds/synth/rtl-IBEX/ibex_controller.sv' on line 192, column 28.
+  assign ecall_insn      = ecall_insn_i      & instr_valid_i;
+                                               |
+Error   : Reference to undeclared variable. A variable/parameter must be declared before it is referenced. [VLOGPT-20] [read_hdl]
+        : Symbol 'instr_valid_i' in file '/home/usr8/work_space/sky130_cds/synth/rtl-IBEX/ibex_controller.sv' on line 192, column 48.
+  assign mret_insn       = mret_insn_i       & instr_valid_i;
+                           |
+Error   : Reference to undeclared variable. A variable/parameter must be declared before it is referenced. [VLOGPT-20] [read_hdl]
+        : Symbol 'mret_insn_i' in file '/home/usr8/work_space/sky130_cds/synth/rtl-IBEX/ibex_controller.sv' on line 193, column 28.
+  assign mret_insn       = mret_insn_i       & instr_valid_i;
+                                               |
+Error   : Reference to undeclared variable. A variable/parameter must be declared before it is referenced. [VLOGPT-20] [read_hdl]
+        : Symbol 'instr_valid_i' in file '/home/usr8/work_space/sky130_cds/synth/rtl-IBEX/ibex_controller.sv' on line 193, column 48.
+  assign dret_insn       = dret_insn_i       & instr_valid_i;
+                           |
+Error   : Reference to undeclared variable. A variable/parameter must be declared before it is referenced. [VLOGPT-20] [read_hdl]
+        : Symbol 'dret_insn_i' in file '/home/usr8/work_space/sky130_cds/synth/rtl-IBEX/ibex_controller.sv' on line 194, column 28.
+  assign dret_insn       = dret_insn_i       & instr_valid_i;
+                                               |
+Error   : Reference to undeclared variable. A variable/parameter must be declared before it is referenced. [VLOGPT-20] [read_hdl]
+        : Symbol 'instr_valid_i' in file '/home/usr8/work_space/sky130_cds/synth/rtl-IBEX/ibex_controller.sv' on line 194, column 48.
+  assign wfi_insn        = wfi_insn_i        & instr_valid_i;
+                           |
+Error   : Reference to undeclared variable. A variable/parameter must be declared before it is referenced. [VLOGPT-20] [read_hdl]
+        : Symbol 'wfi_insn_i' in file '/home/usr8/work_space/sky130_cds/synth/rtl-IBEX/ibex_controller.sv' on line 195, column 28.
+  assign wfi_insn        = wfi_insn_i        & instr_valid_i;
+                                               |
+Error   : Reference to undeclared variable. A variable/parameter must be declared before it is referenced. [VLOGPT-20] [read_hdl]
+        : Symbol 'instr_valid_i' in file '/home/usr8/work_space/sky130_cds/synth/rtl-IBEX/ibex_controller.sv' on line 195, column 48.
+  assign ebrk_insn       = ebrk_insn_i       & instr_valid_i;
+                           |
+Error   : Reference to undeclared variable. A variable/parameter must be declared before it is referenced. [VLOGPT-20] [read_hdl]
+        : Symbol 'ebrk_insn_i' in file '/home/usr8/work_space/sky130_cds/synth/rtl-IBEX/ibex_controller.sv' on line 196, column 28.
+  assign ebrk_insn       = ebrk_insn_i       & instr_valid_i;
+                                               |
+Error   : Reference to undeclared variable. A variable/parameter must be declared before it is referenced. [VLOGPT-20] [read_hdl]
+        : Symbol 'instr_valid_i' in file '/home/usr8/work_space/sky130_cds/synth/rtl-IBEX/ibex_controller.sv' on line 196, column 48.
+  assign csr_pipe_flush  = csr_pipe_flush_i  & instr_valid_i;
+                           |
+Error   : Reference to undeclared variable. A variable/parameter must be declared before it is referenced. [VLOGPT-20] [read_hdl]
+        : Symbol 'csr_pipe_flush_i' in file '/home/usr8/work_space/sky130_cds/synth/rtl-IBEX/ibex_controller.sv' on line 197, column 28.
+  assign csr_pipe_flush  = csr_pipe_flush_i  & instr_valid_i;
+                                               |
+Error   : Reference to undeclared variable. A variable/parameter must be declared before it is referenced. [VLOGPT-20] [read_hdl]
+        : Symbol 'instr_valid_i' in file '/home/usr8/work_space/sky130_cds/synth/rtl-IBEX/ibex_controller.sv' on line 197, column 48.
+  assign instr_fetch_err = instr_fetch_err_i & instr_valid_i;
+                           |
+Error   : Reference to undeclared variable. A variable/parameter must be declared before it is referenced. [VLOGPT-20] [read_hdl]
+        : Symbol 'instr_fetch_err_i' in file '/home/usr8/work_space/sky130_cds/synth/rtl-IBEX/ibex_controller.sv' on line 198, column 28.
+  assign instr_fetch_err = instr_fetch_err_i & instr_valid_i;
+                                               |
+Error   : Reference to undeclared variable. A variable/parameter must be declared before it is referenced. [VLOGPT-20] [read_hdl]
+        : Symbol 'instr_valid_i' in file '/home/usr8/work_space/sky130_cds/synth/rtl-IBEX/ibex_controller.sv' on line 198, column 48.
+#@ End verbose source ./genus_script_IBEX_ICGC.tcl
+1
+@genus:root: 2> read_hdl $my_verilog_files
+package ibex_pkg;
+               |
+Error   : Parsing error. [VLOGPT-1] [read_hdl]
+        : Expecting token ';', found '<identifier>' in file '/home/usr8/work_space/sky130_cds/synth/rtl-IBEX/ibex_pkg.sv' on line 9, column 16.
+  typedef struct packed {
+               |
+Error   : Parsing error. [VLOGPT-1] [read_hdl]
+        : Expecting token ';', found '<identifier>' in file '/home/usr8/work_space/sky130_cds/synth/rtl-IBEX/ibex_pkg.sv' on line 15, column 16.
+    logic [31:0] next_pc;
+                       |
+Error   : Parsing error. [VLOGPT-1] [read_hdl]
+        : Expecting token ';', found '<identifier>' in file '/home/usr8/work_space/sky130_cds/synth/rtl-IBEX/ibex_pkg.sv' on line 17, column 24.
+    logic [31:0] last_data_addr;
+                              |
+Error   : Redeclared variable. [VLOGPT-22] [read_hdl]
+        : Redeclaration of symbol 'logic' in file '/home/usr8/work_space/sky130_cds/synth/rtl-IBEX/ibex_pkg.sv' on line 18, column 31.
+        : A variable cannot be redeclared in the same scope. Check the reported RTL file and remove duplicate declarations.
+    logic [31:0] last_data_addr;
+                              |
+Error   : Parsing error. [VLOGPT-1] [read_hdl]
+        : Expecting token ';', found '<identifier>' in file '/home/usr8/work_space/sky130_cds/synth/rtl-IBEX/ibex_pkg.sv' on line 18, column 31.
+    logic [31:0] exception_pc;
+                            |
+Error   : Redeclared variable. [VLOGPT-22] [read_hdl]
+        : Redeclaration of symbol 'logic' in file '/home/usr8/work_space/sky130_cds/synth/rtl-IBEX/ibex_pkg.sv' on line 19, column 29.
+    logic [31:0] exception_pc;
+                            |
+Error   : Parsing error. [VLOGPT-1] [read_hdl]
+        : Expecting token ';', found '<identifier>' in file '/home/usr8/work_space/sky130_cds/synth/rtl-IBEX/ibex_pkg.sv' on line 19, column 29.
+    logic [31:0] exception_addr;
+                              |
+Error   : Redeclared variable. [VLOGPT-22] [read_hdl]
+        : Redeclaration of symbol 'logic' in file '/home/usr8/work_space/sky130_cds/synth/rtl-IBEX/ibex_pkg.sv' on line 20, column 31.
+    logic [31:0] exception_addr;
+                              |
+Error   : Parsing error. [VLOGPT-1] [read_hdl]
+        : Expecting token ';', found '<identifier>' in file '/home/usr8/work_space/sky130_cds/synth/rtl-IBEX/ibex_pkg.sv' on line 20, column 31.
+  } crash_dump_t;
+  |
+Error   : Parsing error. [VLOGPT-1] [read_hdl]
+        : Expecting a package item. in file '/home/usr8/work_space/sky130_cds/synth/rtl-IBEX/ibex_pkg.sv' on line 21, column 3.
+  typedef struct packed {
+               |
+Error   : Redeclared variable. [VLOGPT-22] [read_hdl]
+        : Redeclaration of symbol 'typedef' in file '/home/usr8/work_space/sky130_cds/synth/rtl-IBEX/ibex_pkg.sv' on line 23, column 16.
+  typedef struct packed {
+               |
+Error   : Parsing error. [VLOGPT-1] [read_hdl]
+        : Expecting token ';', found '<identifier>' in file '/home/usr8/work_space/sky130_cds/synth/rtl-IBEX/ibex_pkg.sv' on line 23, column 16.
+    logic [4:0]  raddr_a;
+                       |
+Error   : Redeclared variable. [VLOGPT-22] [read_hdl]
+        : Redeclaration of symbol 'logic' in file '/home/usr8/work_space/sky130_cds/synth/rtl-IBEX/ibex_pkg.sv' on line 25, column 24.
+    logic [4:0]  raddr_a;
+                       |
+Error   : Parsing error. [VLOGPT-1] [read_hdl]
+        : Expecting token ';', found '<identifier>' in file '/home/usr8/work_space/sky130_cds/synth/rtl-IBEX/ibex_pkg.sv' on line 25, column 24.
+    logic [4:0]  waddr_a;
+                       |
+Error   : Redeclared variable. [VLOGPT-22] [read_hdl]
+        : Redeclaration of symbol 'logic' in file '/home/usr8/work_space/sky130_cds/synth/rtl-IBEX/ibex_pkg.sv' on line 26, column 24.
+    logic [4:0]  waddr_a;
+                       |
+Error   : Parsing error. [VLOGPT-1] [read_hdl]
+        : Expecting token ';', found '<identifier>' in file '/home/usr8/work_space/sky130_cds/synth/rtl-IBEX/ibex_pkg.sv' on line 26, column 24.
+    logic        we_a;
+                    |
+Error   : Redeclared variable. [VLOGPT-22] [read_hdl]
+        : Redeclaration of symbol 'logic' in file '/home/usr8/work_space/sky130_cds/synth/rtl-IBEX/ibex_pkg.sv' on line 27, column 21.
+    logic        we_a;
+                    |
+Error   : Parsing error. [VLOGPT-1] [read_hdl]
+        : Expecting token ';', found '<identifier>' in file '/home/usr8/work_space/sky130_cds/synth/rtl-IBEX/ibex_pkg.sv' on line 27, column 21.
+    logic [4:0]  raddr_b;
+                       |
+Error   : Redeclared variable. [VLOGPT-22] [read_hdl]
+        : Redeclaration of symbol 'logic' in file '/home/usr8/work_space/sky130_cds/synth/rtl-IBEX/ibex_pkg.sv' on line 28, column 24.
+    logic [4:0]  raddr_b;
+                       |
+Error   : Parsing error. [VLOGPT-1] [read_hdl]
+        : Expecting token ';', found '<identifier>' in file '/home/usr8/work_space/sky130_cds/synth/rtl-IBEX/ibex_pkg.sv' on line 28, column 24.
+1
+
+Another Ctrl-C within 1 second will terminate the tool.
+CURRENT RESOURCES: RT {elapsed: 962s, ST: 38s, FG: 38s, CPU: 7.3%}, MEM {curr: 1.4G, peak: 1.7G, phys curr: 0.4G, phys peak: 0.4G}, SYS {load: 0.7, cpu: 48, total: 377.6G, free: 51.6G}
+@genus:root: 3> 
