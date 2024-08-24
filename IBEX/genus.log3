@@ -1,0 +1,562 @@
+Cadence Genus(TM) Synthesis Solution.
+Copyright 2023 Cadence Design Systems, Inc. All rights reserved worldwide.
+Cadence and the Cadence logo are registered trademarks and Genus is a trademark
+of Cadence Design Systems, Inc. in the United States and other countries.
+
+[17:43:46.445897] Configured Lic search path (21.01-s002): 5280@192.168.32.10
+
+Version: 22.12-s082_1, built Sat May 06 04:39:19 PDT 2023
+Options: 
+Date:    Wed Aug 21 17:43:46 2024
+Host:    edabk.server1 (x86_64 w/Linux 3.10.0-1160.108.1.el7.x86_64) (24cores*48cpus*2physical cpus*AMD EPYC 7402 24-Core Processor 512KB) (395944776KB)
+PID:     30886
+OS:      CentOS Linux release 7.9.2009 (Core)
+
+Checking out license: Genus_Synthesis
+[17:43:47.388625] Periodic Lic check successful
+[17:43:47.388643] Feature usage summary:
+[17:43:47.388643] Genus_Synthesis
+
+
+
+***********************************************************************************************************
+***********************************************************************************************************
+
+
+
+Finished executable startup (3 seconds elapsed).
+
+Loading tool scripts...
+Finished loading tool scripts (15 seconds elapsed).
+
+WARNING: This version of the tool is 472 days old.
+@genus:root: 1> set fd_sclib ../../sky130_fd_sc_hd/lib
+../../sky130_fd_sc_hd/lib
+@genus:root: 2> set osu_t18lib ../../sky130_osu_sc_t18/18T_hs/lib
+../../sky130_osu_sc_t18/18T_hs/lib
+@genus:root: 3> set osu_t12lib ../../sky130_osu_sc_t12/12T_hs/lib
+../../sky130_osu_sc_t12/12T_hs/lib
+@genus:root: 4> set_db init_lib_search_path [list $fd_sclib $osu_t18lib $osu_t12lib]
+  Setting attribute of root '/': 'init_lib_search_path' = ../../sky130_fd_sc_hd/lib ../../sky130_osu_sc_t18/18T_hs/lib ../../sky130_osu_sc_t12/12T_hs/lib
+1 {../../sky130_fd_sc_hd/lib ../../sky130_osu_sc_t18/18T_hs/lib ../../sky130_osu_sc_t12/12T_hs/lib}
+@genus:root: 5> 
+@genus:root: 5> set search_path [list "./" ]
+./
+@genus:root: 6> lappend search_path $fd_sclib
+./ ../../sky130_fd_sc_hd/lib
+@genus:root: 7> lappend search_path $osu_t18lib
+./ ../../sky130_fd_sc_hd/lib ../../sky130_osu_sc_t18/18T_hs/lib
+@genus:root: 8> lappend search_path $osu_t12lib
+./ ../../sky130_fd_sc_hd/lib ../../sky130_osu_sc_t18/18T_hs/lib ../../sky130_osu_sc_t12/12T_hs/lib
+@genus:root: 9> lappend search_path /home/usr8/work_space/sky130_cds/synth/rtl_IBEX
+./ ../../sky130_fd_sc_hd/lib ../../sky130_osu_sc_t18/18T_hs/lib ../../sky130_osu_sc_t12/12T_hs/lib /home/usr8/work_space/sky130_cds/synth/rtl_IBEX
+@genus:root: 10> set_db init_hdl_search_path $search_path
+  Setting attribute of root '/': 'init_hdl_search_path' = ./ ../../sky130_fd_sc_hd/lib ../../sky130_osu_sc_t18/18T_hs/lib ../../sky130_osu_sc_t12/12T_hs/lib /home/usr8/work_space/sky130_cds/synth/rtl_IBEX
+1 {./ ../../sky130_fd_sc_hd/lib ../../sky130_osu_sc_t18/18T_hs/lib ../../sky130_osu_sc_t12/12T_hs/lib /home/usr8/work_space/sky130_cds/synth/rtl_IBEX}
+@genus:root: 11> 
+@genus:root: 11> read_libs [list sky130_fd_sc_hd__tt_100C_1v80.lib sky130_osu_sc_18T_hs_tt_1P80_100C.ccs.lib]
+
+  Message Summary for Library both libraries:
+  *******************************************
+  An unsupported construct was detected in this library. [LBR-40]: 13
+  *******************************************
+ 
+Info    : Created nominal operating condition. [LBR-412]
+        : Operating condition '_nominal_' was created for the PVT values (1.000000, 1.800000, 100.000000) in library 'sky130_fd_sc_hd__tt_100C_1v80.lib'.
+        : The nominal operating condition is represented, either by the nominal PVT values specified in the library source (via nom_process,nom_voltage and nom_temperature respectively), or by the default PVT values (1.0,1.0,1.0).
+Info    : Created nominal operating condition. [LBR-412]
+        : Operating condition '_nominal_' was created for the PVT values (1.000000, 1.800000, 100.000000) in library 'sky130_osu_sc_18T_hs_tt_1P80_100C.ccs.lib'.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'sky130_osu_sc_18T_hs__ant' must have an output pin.
+        : Add the missing output pin(s), then reload the library. Else the library cell will be marked as timing model i.e. unusable. Timing_model means that the cell does not have any defined function. If there is no output pin, Genus will mark library cell as unusable i.e. the attribute 'usable' will be marked to 'false' on the libcell. Therefore, the cell is not used for mapping and it will not be picked up from the library for synthesis. If you query the attribute 'unusable_reason' on the libcell; result will be: 'Library cell has no output pins.'Note: The message LBR-9 is only for the logical pins and not for the power_ground pins. Genus will depend upon the output function defined in the pin group (output pin) of the cell, to use it for mapping. The pg_pin will not have any function defined.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'sky130_osu_sc_18T_hs__ant' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'sky130_fd_sc_hd__decap_12' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'sky130_fd_sc_hd__decap_12' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'sky130_fd_sc_hd__decap_3' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'sky130_fd_sc_hd__decap_3' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'sky130_fd_sc_hd__decap_4' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'sky130_fd_sc_hd__decap_4' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'sky130_fd_sc_hd__decap_6' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'sky130_fd_sc_hd__decap_6' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'sky130_fd_sc_hd__decap_8' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'sky130_fd_sc_hd__decap_8' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'sky130_fd_sc_hd__diode_2' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'sky130_fd_sc_hd__diode_2' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'sky130_fd_sc_hd__lpflow_bleeder_1' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'sky130_fd_sc_hd__lpflow_bleeder_1' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'sky130_fd_sc_hd__lpflow_decapkapwr_12' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'sky130_fd_sc_hd__lpflow_decapkapwr_12' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'sky130_fd_sc_hd__lpflow_decapkapwr_3' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'sky130_fd_sc_hd__lpflow_decapkapwr_3' must have an output pin.
+Warning : Maximum message print count reached. [MESG-11]
+        : Maximum print count of '20' reached for message 'LBR-9'.
+@genus:root: 12> set my_verilog_files [list prim_assert.sv ibex_alu.sv ibex_branch_predict.sv ibex_compressed_decoder.sv ibex_controller.sv ibex_cs_registers.sv ibex_csr.sv ibex_counter.sv ibex_decoder.sv ibex_ex_block.sv ibex_fetch_fifo.sv ibex_id_stage.sv ibex_if_stage.sv ibex_load_store_unit.sv ibex_multdiv_fast.sv ibex_multdiv_slow.sv ibex_prefetch_buffer.sv ibex_pmp.sv ibex_wb_stage.sv ibex_dummy_instr.sv ibex_core.sv ]
+prim_assert.sv ibex_alu.sv ibex_branch_predict.sv ibex_compressed_decoder.sv ibex_controller.sv ibex_cs_registers.sv ibex_csr.sv ibex_counter.sv ibex_decoder.sv ibex_ex_block.sv ibex_fetch_fifo.sv ibex_id_stage.sv ibex_if_stage.sv ibex_load_store_unit.sv ibex_multdiv_fast.sv ibex_multdiv_slow.sv ibex_prefetch_buffer.sv ibex_pmp.sv ibex_wb_stage.sv ibex_dummy_instr.sv ibex_core.sv
+@genus:root: 13> set my_toplevel "ibex_core"
+ibex_core
+@genus:root: 14> read_hdl -language sv $my_verilog_files
+package ibex_pkg;
+                |
+Warning : Ignoring duplicate package definition. [VLOGPT-601]
+        : Ignoring definition of package 'ibex_pkg' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_pkg.sv' on line 9, column 17.
+package ibex_pkg;
+                |
+Warning : Ignoring duplicate package definition. [VLOGPT-601]
+        : Ignoring definition of package 'ibex_pkg' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_pkg.sv' on line 9, column 17.
+  `DV_FCOV_SIGNAL(logic, debug_wakeup, (ctrl_fsm_cs == SLEEP) & (ctrl_fsm_ns == FIRST_FETCH) &
+                |
+Error   : Reference to undefined macro. [VLOGPT-631] [read_hdl]
+        : Macro 'DV_FCOV_SIGNAL' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_controller.sv' on line 904, column 17.
+        : Error encountered during Verilog parsing. Make sure all paths of include files have been specified in the init_hdl_search_path attribute. Also, check whether you need to specify the -define option of the read_hdl command.
+  `DV_FCOV_SIGNAL(logic, debug_wakeup, (ctrl_fsm_cs == SLEEP) & (ctrl_fsm_ns == FIRST_FETCH) &
+  |
+Error   : Parsing error. [VLOGPT-1] [read_hdl]
+        : in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_controller.sv' on line 904, column 3.
+        : Invalid Verilog syntax is parsed, or unsupported Verilog syntax is encountered.
+  `DV_FCOV_SIGNAL(logic, debug_wakeup, (ctrl_fsm_cs == SLEEP) & (ctrl_fsm_ns == FIRST_FETCH) &
+  |
+Error   : Parsing error. [VLOGPT-1] [read_hdl]
+        : Expecting token ';', found '(' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_controller.sv' on line 904, column 3.
+  localparam int unsigned RV32BExtra   = (RV32B != RV32BNone) ? 1 : 0;
+                                          |
+Error   : Reference to undeclared variable. A variable/parameter must be declared before it is referenced. [VLOGPT-20] [read_hdl]
+        : Symbol 'RV32B' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_cs_registers.sv' on line 143, column 43.
+        : Verilog module is using a parameter that is not defined in the module. You will get a notification for this, if you read the verilog file using the read_hdl command.
+  localparam int unsigned RV32BExtra   = (RV32B != RV32BNone) ? 1 : 0;
+                                          |
+Error   : Reference to undeclared variable. A variable/parameter must be declared before it is referenced. [VLOGPT-20] [read_hdl]
+        : Symbol 'RV32B' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_cs_registers.sv' on line 143, column 43.
+  localparam int unsigned RV32MEnabled = (RV32M == RV32MNone) ? 0 : 1;
+                                          |
+Error   : Reference to undeclared variable. A variable/parameter must be declared before it is referenced. [VLOGPT-20] [read_hdl]
+        : Symbol 'RV32M' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_cs_registers.sv' on line 144, column 43.
+  localparam int unsigned RV32MEnabled = (RV32M == RV32MNone) ? 0 : 1;
+                                          |
+Error   : Reference to undeclared variable. A variable/parameter must be declared before it is referenced. [VLOGPT-20] [read_hdl]
+        : Symbol 'RV32M' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_cs_registers.sv' on line 144, column 43.
+  localparam int unsigned PMPAddrWidth = (PMPGranularity > 0) ? 33 - PMPGranularity : 32;
+                                          |
+Error   : Reference to undeclared variable. A variable/parameter must be declared before it is referenced. [VLOGPT-20] [read_hdl]
+        : Symbol 'PMPGranularity' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_cs_registers.sv' on line 145, column 43.
+  localparam int unsigned PMPAddrWidth = (PMPGranularity > 0) ? 33 - PMPGranularity : 32;
+                                                                     |
+Error   : Reference to undeclared variable. A variable/parameter must be declared before it is referenced. [VLOGPT-20] [read_hdl]
+        : Symbol 'PMPGranularity' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_cs_registers.sv' on line 145, column 70.
+  localparam int unsigned PMPAddrWidth = (PMPGranularity > 0) ? 33 - PMPGranularity : 32;
+                                          |
+Error   : Reference to undeclared variable. A variable/parameter must be declared before it is referenced. [VLOGPT-20] [read_hdl]
+        : Symbol 'PMPGranularity' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_cs_registers.sv' on line 145, column 43.
+  localparam int unsigned PMPAddrWidth = (PMPGranularity > 0) ? 33 - PMPGranularity : 32;
+                                                                     |
+Error   : Reference to undeclared variable. A variable/parameter must be declared before it is referenced. [VLOGPT-20] [read_hdl]
+        : Symbol 'PMPGranularity' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_cs_registers.sv' on line 145, column 70.
+    | (32'(RV32E)        <<  4)  // E - RV32E base ISA
+           |
+Error   : Reference to undeclared variable. A variable/parameter must be declared before it is referenced. [VLOGPT-20] [read_hdl]
+        : Symbol 'RV32E' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_cs_registers.sv' on line 153, column 12.
+    | (32'(!RV32E)       <<  8)  // I - RV32I/64I/128I base ISA
+            |
+Error   : Reference to undeclared variable. A variable/parameter must be declared before it is referenced. [VLOGPT-20] [read_hdl]
+        : Symbol 'RV32E' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_cs_registers.sv' on line 155, column 13.
+    | (32'(RV32E)        <<  4)  // E - RV32E base ISA
+           |
+Error   : Reference to undeclared variable. A variable/parameter must be declared before it is referenced. [VLOGPT-20] [read_hdl]
+        : Symbol 'RV32E' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_cs_registers.sv' on line 153, column 12.
+    | (32'(!RV32E)       <<  8)  // I - RV32I/64I/128I base ISA
+            |
+Error   : Reference to undeclared variable. A variable/parameter must be declared before it is referenced. [VLOGPT-20] [read_hdl]
+        : Symbol 'RV32E' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_cs_registers.sv' on line 155, column 13.
+  logic [MHPMCounterNum+3-1:0] mcountinhibit_d, mcountinhibit_q;
+         |
+Error   : Reference to undeclared variable. A variable/parameter must be declared before it is referenced. [VLOGPT-20] [read_hdl]
+        : Symbol 'MHPMCounterNum' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_cs_registers.sv' on line 253, column 10.
+  assign csr_addr           = {csr_addr_i};
+                               |
+Error   : Reference to undeclared variable. A variable/parameter must be declared before it is referenced. [VLOGPT-20] [read_hdl]
+        : Symbol 'csr_addr_i' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_cs_registers.sv' on line 308, column 32.
+  assign illegal_csr_dbg    = dbg_csr & ~debug_mode_i;
+                                         |
+Error   : Reference to undeclared variable. A variable/parameter must be declared before it is referenced. [VLOGPT-20] [read_hdl]
+        : Symbol 'debug_mode_i' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_cs_registers.sv' on line 312, column 42.
+  assign illegal_csr_insn_o = csr_access_i & (illegal_csr | illegal_csr_write | illegal_csr_priv |
+                              |
+Error   : Reference to undeclared variable. A variable/parameter must be declared before it is referenced. [VLOGPT-20] [read_hdl]
+        : Symbol 'csr_access_i' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_cs_registers.sv' on line 315, column 31.
+  assign mip.irq_software = irq_software_i;
+                            |
+Error   : Reference to undeclared variable. A variable/parameter must be declared before it is referenced. [VLOGPT-20] [read_hdl]
+        : Symbol 'irq_software_i' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_cs_registers.sv' on line 319, column 29.
+1
+@genus:root: 15> read_hdl -language sv $my_verilog_files
+package ibex_pkg;
+                |
+Warning : Ignoring duplicate package definition. [VLOGPT-601]
+        : Ignoring definition of package 'ibex_pkg' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_pkg.sv' on line 9, column 17.
+module ibex_alu#(
+              |
+Warning : Replacing previously read Verilog description. [VLOGPT-6]
+        : Replacing Verilog description 'ibex_alu' with Verilog module in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_alu.sv' on line 14, column 15.
+        : A Verilog description is replaced when a new description of the same name and same library is read again.
+    Verilog descriptions are:
+       module
+       macromodule
+       configuration
+    SystemVerilog adds the following descriptions:
+       interface
+       program
+       package.
+package ibex_pkg;
+                |
+Warning : Ignoring duplicate package definition. [VLOGPT-601]
+        : Ignoring definition of package 'ibex_pkg' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_pkg.sv' on line 9, column 17.
+module ibex_branch_predict (
+                         |
+Warning : Replacing previously read Verilog description. [VLOGPT-6]
+        : Replacing Verilog description 'ibex_branch_predict' with Verilog module in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_branch_predict.sv' on line 22, column 26.
+package ibex_pkg;
+                |
+Warning : Ignoring duplicate package definition. [VLOGPT-601]
+        : Ignoring definition of package 'ibex_pkg' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_pkg.sv' on line 9, column 17.
+module ibex_compressed_decoder (
+                             |
+Warning : Replacing previously read Verilog description. [VLOGPT-6]
+        : Replacing Verilog description 'ibex_compressed_decoder' with Verilog module in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_compressed_decoder.sv' on line 18, column 30.
+package ibex_pkg;
+                |
+Warning : Ignoring duplicate package definition. [VLOGPT-601]
+        : Ignoring definition of package 'ibex_pkg' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_pkg.sv' on line 9, column 17.
+package ibex_pkg;
+                |
+Warning : Ignoring duplicate package definition. [VLOGPT-601]
+        : Ignoring definition of package 'ibex_pkg' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_pkg.sv' on line 9, column 17.
+package ibex_pkg;
+                |
+Warning : Ignoring duplicate package definition. [VLOGPT-601]
+        : Ignoring definition of package 'ibex_pkg' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_pkg.sv' on line 9, column 17.
+package ibex_pkg;
+                |
+Warning : Ignoring duplicate package definition. [VLOGPT-601]
+        : Ignoring definition of package 'ibex_pkg' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_pkg.sv' on line 9, column 17.
+package ibex_pkg;
+                |
+Warning : Ignoring duplicate package definition. [VLOGPT-601]
+        : Ignoring definition of package 'ibex_pkg' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_pkg.sv' on line 9, column 17.
+package ibex_pkg;
+                |
+Warning : Ignoring duplicate package definition. [VLOGPT-601]
+        : Ignoring definition of package 'ibex_pkg' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_pkg.sv' on line 9, column 17.
+package ibex_pkg;
+                |
+Warning : Ignoring duplicate package definition. [VLOGPT-601]
+        : Ignoring definition of package 'ibex_pkg' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_pkg.sv' on line 9, column 17.
+package ibex_pkg;
+                |
+Warning : Ignoring duplicate package definition. [VLOGPT-601]
+        : Ignoring definition of package 'ibex_pkg' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_pkg.sv' on line 9, column 17.
+package ibex_pkg;
+                |
+Warning : Ignoring duplicate package definition. [VLOGPT-601]
+        : Ignoring definition of package 'ibex_pkg' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_pkg.sv' on line 9, column 17.
+package ibex_pkg;
+                |
+Warning : Ignoring duplicate package definition. [VLOGPT-601]
+        : Ignoring definition of package 'ibex_pkg' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_pkg.sv' on line 9, column 17.
+Warning : Replacing previously read Verilog module or VHDL entity. [HPT-76]
+        : Replacing Verilog module 'ibex_alu' in library 'default' with newly read Verilog module 'ibex_alu' in the same library in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_alu.sv' on line 14.
+        : A newly read VHDL entity replaces any previously read Verilog module or VHDL entity in the same library if its name matches (case-insensitively) the existing module or entity.
+    For instance:
+        VHDL 'foo'                  replaces  VHDL {'FOO' or 'foo' or 'Foo' or ...} in the same library
+        VHDL 'foo' (in any library) replaces  Verilog {'FOO' or 'foo' or 'Foo' or ...} in the same library
+ 
+A newly read Verilog module replaces any previously read Verilog module if its name matches (case-sensitively) that module.  Further, it replaces any previously read VHDL entity in the same library if its name matches (case -insensitively) that entity.
+    For instance:
+        Verilog 'foo' replaces    VHDL {'FOO' or 'foo' or 'Foo' or ...} in the same library
+        Verilog 'foo' replaces    Verilog 'foo' only
+    In addition:
+        Verilog 'foo' does not replace Verilog 'FOO' and the two remain as distinct modules.
+Warning : Replacing previously read Verilog module or VHDL entity. [HPT-76]
+        : Replacing Verilog module 'ibex_branch_predict' in library 'default' with newly read Verilog module 'ibex_branch_predict' in the same library in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_branch_predict.sv' on line 22.
+Warning : Replacing previously read Verilog module or VHDL entity. [HPT-76]
+        : Replacing Verilog module 'ibex_compressed_decoder' in library 'default' with newly read Verilog module 'ibex_compressed_decoder' in the same library in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_compressed_decoder.sv' on line 18.
+@genus:root: 16> read_hdl -language sv $my_verilog_files
+package ibex_pkg;
+                |
+Warning : Ignoring duplicate package definition. [VLOGPT-601]
+        : Ignoring definition of package 'ibex_pkg' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_pkg.sv' on line 9, column 17.
+module ibex_alu#(
+              |
+Warning : Replacing previously read Verilog description. [VLOGPT-6]
+        : Replacing Verilog description 'ibex_alu' with Verilog module in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_alu.sv' on line 14, column 15.
+package ibex_pkg;
+                |
+Warning : Ignoring duplicate package definition. [VLOGPT-601]
+        : Ignoring definition of package 'ibex_pkg' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_pkg.sv' on line 9, column 17.
+module ibex_branch_predict (
+                         |
+Warning : Replacing previously read Verilog description. [VLOGPT-6]
+        : Replacing Verilog description 'ibex_branch_predict' with Verilog module in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_branch_predict.sv' on line 22, column 26.
+package ibex_pkg;
+                |
+Warning : Ignoring duplicate package definition. [VLOGPT-601]
+        : Ignoring definition of package 'ibex_pkg' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_pkg.sv' on line 9, column 17.
+module ibex_compressed_decoder (
+                             |
+Warning : Replacing previously read Verilog description. [VLOGPT-6]
+        : Replacing Verilog description 'ibex_compressed_decoder' with Verilog module in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_compressed_decoder.sv' on line 18, column 30.
+module ibex_controller #(
+                     |
+Warning : Replacing previously read Verilog description. [VLOGPT-6]
+        : Replacing Verilog description 'ibex_controller' with Verilog module in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_controller.sv' on line 12, column 22.
+module ibex_cs_registers #(
+                       |
+Warning : Replacing previously read Verilog description. [VLOGPT-6]
+        : Replacing Verilog description 'ibex_cs_registers' with Verilog module in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_cs_registers.sv' on line 12, column 24.
+module ibex_csr #(
+              |
+Warning : Replacing previously read Verilog description. [VLOGPT-6]
+        : Replacing Verilog description 'ibex_csr' with Verilog module in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_csr.sv' on line 11, column 15.
+module ibex_counter #(
+                  |
+Warning : Replacing previously read Verilog description. [VLOGPT-6]
+        : Replacing Verilog description 'ibex_counter' with Verilog module in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_counter.sv' on line 5, column 19.
+package ibex_pkg;
+                |
+Warning : Ignoring duplicate package definition. [VLOGPT-601]
+        : Ignoring definition of package 'ibex_pkg' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_pkg.sv' on line 9, column 17.
+module ibex_decoder #(
+                  |
+Warning : Replacing previously read Verilog description. [VLOGPT-6]
+        : Replacing Verilog description 'ibex_decoder' with Verilog module in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_decoder.sv' on line 16, column 19.
+package ibex_pkg;
+                |
+Warning : Ignoring duplicate package definition. [VLOGPT-601]
+        : Ignoring definition of package 'ibex_pkg' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_pkg.sv' on line 9, column 17.
+module ibex_ex_block #(
+                   |
+Warning : Replacing previously read Verilog description. [VLOGPT-6]
+        : Replacing Verilog description 'ibex_ex_block' with Verilog module in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_ex_block.sv' on line 15, column 20.
+module ibex_fetch_fifo #(
+                     |
+Warning : Replacing previously read Verilog description. [VLOGPT-6]
+        : Replacing Verilog description 'ibex_fetch_fifo' with Verilog module in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_fetch_fifo.sv' on line 14, column 22.
+Warning : Maximum message print count reached. [MESG-11]
+        : Maximum print count of '20' reached for message 'VLOGPT-601'.
+module ibex_id_stage #(
+                   |
+Warning : Replacing previously read Verilog description. [VLOGPT-6]
+        : Replacing Verilog description 'ibex_id_stage' with Verilog module in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_id_stage.sv' on line 9, column 20.
+module ibex_if_stage #(
+                   |
+Warning : Replacing previously read Verilog description. [VLOGPT-6]
+        : Replacing Verilog description 'ibex_if_stage' with Verilog module in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_if_stage.sv' on line 17, column 20.
+module ibex_load_store_unit #(
+                          |
+Warning : Replacing previously read Verilog description. [VLOGPT-6]
+        : Replacing Verilog description 'ibex_load_store_unit' with Verilog module in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_load_store_unit.sv' on line 16, column 27.
+module ibex_multdiv_fast #(
+                       |
+Warning : Replacing previously read Verilog description. [VLOGPT-6]
+        : Replacing Verilog description 'ibex_multdiv_fast' with Verilog module in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_multdiv_fast.sv' on line 19, column 24.
+module ibex_multdiv_slow
+                       |
+Warning : Replacing previously read Verilog description. [VLOGPT-6]
+        : Replacing Verilog description 'ibex_multdiv_slow' with Verilog module in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_multdiv_slow.sv' on line 16, column 24.
+module ibex_prefetch_buffer #(
+                          |
+Warning : Replacing previously read Verilog description. [VLOGPT-6]
+        : Replacing Verilog description 'ibex_prefetch_buffer' with Verilog module in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_prefetch_buffer.sv' on line 12, column 27.
+module ibex_pmp #(
+              |
+Warning : Replacing previously read Verilog description. [VLOGPT-6]
+        : Replacing Verilog description 'ibex_pmp' with Verilog module in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_pmp.sv' on line 8, column 15.
+Warning : Maximum message print count reached. [MESG-11]
+        : Maximum print count of '20' reached for message 'VLOGPT-6'.
+Warning : Replacing previously read Verilog module or VHDL entity. [HPT-76]
+        : Replacing Verilog module 'ibex_alu' in library 'default' with newly read Verilog module 'ibex_alu' in the same library in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_alu.sv' on line 14.
+Warning : Replacing previously read Verilog module or VHDL entity. [HPT-76]
+        : Replacing Verilog module 'ibex_branch_predict' in library 'default' with newly read Verilog module 'ibex_branch_predict' in the same library in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_branch_predict.sv' on line 22.
+Warning : Replacing previously read Verilog module or VHDL entity. [HPT-76]
+        : Replacing Verilog module 'ibex_compressed_decoder' in library 'default' with newly read Verilog module 'ibex_compressed_decoder' in the same library in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_compressed_decoder.sv' on line 18.
+Warning : Replacing previously read Verilog module or VHDL entity. [HPT-76]
+        : Replacing Verilog module 'ibex_controller' in library 'default' with newly read Verilog module 'ibex_controller' in the same library in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_controller.sv' on line 12.
+Warning : Replacing previously read Verilog module or VHDL entity. [HPT-76]
+        : Replacing Verilog module 'ibex_cs_registers' in library 'default' with newly read Verilog module 'ibex_cs_registers' in the same library in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_cs_registers.sv' on line 12.
+Warning : Replacing previously read Verilog module or VHDL entity. [HPT-76]
+        : Replacing Verilog module 'ibex_csr' in library 'default' with newly read Verilog module 'ibex_csr' in the same library in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_csr.sv' on line 11.
+Warning : Replacing previously read Verilog module or VHDL entity. [HPT-76]
+        : Replacing Verilog module 'ibex_counter' in library 'default' with newly read Verilog module 'ibex_counter' in the same library in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_counter.sv' on line 5.
+Warning : Replacing previously read Verilog module or VHDL entity. [HPT-76]
+        : Replacing Verilog module 'ibex_decoder' in library 'default' with newly read Verilog module 'ibex_decoder' in the same library in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_decoder.sv' on line 16.
+Warning : Replacing previously read Verilog module or VHDL entity. [HPT-76]
+        : Replacing Verilog module 'ibex_ex_block' in library 'default' with newly read Verilog module 'ibex_ex_block' in the same library in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_ex_block.sv' on line 15.
+Warning : Replacing previously read Verilog module or VHDL entity. [HPT-76]
+        : Replacing Verilog module 'ibex_fetch_fifo' in library 'default' with newly read Verilog module 'ibex_fetch_fifo' in the same library in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_fetch_fifo.sv' on line 14.
+Warning : Replacing previously read Verilog module or VHDL entity. [HPT-76]
+        : Replacing Verilog module 'ibex_id_stage' in library 'default' with newly read Verilog module 'ibex_id_stage' in the same library in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_id_stage.sv' on line 9.
+Warning : Replacing previously read Verilog module or VHDL entity. [HPT-76]
+        : Replacing Verilog module 'ibex_if_stage' in library 'default' with newly read Verilog module 'ibex_if_stage' in the same library in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_if_stage.sv' on line 17.
+Warning : Replacing previously read Verilog module or VHDL entity. [HPT-76]
+        : Replacing Verilog module 'ibex_load_store_unit' in library 'default' with newly read Verilog module 'ibex_load_store_unit' in the same library in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_load_store_unit.sv' on line 16.
+Warning : Replacing previously read Verilog module or VHDL entity. [HPT-76]
+        : Replacing Verilog module 'ibex_multdiv_fast' in library 'default' with newly read Verilog module 'ibex_multdiv_fast' in the same library in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_multdiv_fast.sv' on line 19.
+Warning : Replacing previously read Verilog module or VHDL entity. [HPT-76]
+        : Replacing Verilog module 'ibex_multdiv_slow' in library 'default' with newly read Verilog module 'ibex_multdiv_slow' in the same library in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_multdiv_slow.sv' on line 16.
+Warning : Replacing previously read Verilog module or VHDL entity. [HPT-76]
+        : Replacing Verilog module 'ibex_prefetch_buffer' in library 'default' with newly read Verilog module 'ibex_prefetch_buffer' in the same library in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_prefetch_buffer.sv' on line 12.
+Warning : Replacing previously read Verilog module or VHDL entity. [HPT-76]
+        : Replacing Verilog module 'ibex_pmp' in library 'default' with newly read Verilog module 'ibex_pmp' in the same library in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_pmp.sv' on line 8.
+Warning : Maximum message print count reached. [MESG-11]
+        : Maximum print count of '20' reached for message 'HPT-76'.
+@genus:root: 17> elaborate $my_toplevel
+Warning : Libcell will be treated as a timing model. [LBR-158]
+        : Lib_pin 'sky130_osu_sc_18T_hs__buf_6/Y' has no incoming arcs.
+        : Ensure that the relevant timing arcs are defined in the Liberty model of the libcell.
+  Libraries have 371 usable logic and 70 usable sequential lib-cells.
+Warning : Non-monotonic wireload model found. [LBR-81]
+        : 'Length' table in wireload model 'Huge' is non-monotonic.
+        : Non-monotonic wireload models can cause problems during synthesis and/or mapping.  Raising some of the points in the curve to give it a monotonic shape.
+Warning : Non-monotonic wireload model found. [LBR-81]
+        : 'Length' table in wireload model 'Huge' is non-monotonic.
+Warning : Non-monotonic wireload model found. [LBR-81]
+        : 'Length' table in wireload model 'Huge' is non-monotonic.
+Warning : Non-monotonic wireload model found. [LBR-81]
+        : 'Length' table in wireload model 'Large' is non-monotonic.
+Warning : Non-monotonic wireload model found. [LBR-81]
+        : 'Length' table in wireload model 'Large' is non-monotonic.
+Warning : Non-monotonic wireload model found. [LBR-81]
+        : 'Length' table in wireload model 'Large' is non-monotonic.
+Warning : Non-monotonic wireload model found. [LBR-81]
+        : 'Length' table in wireload model 'Medium' is non-monotonic.
+Warning : Non-monotonic wireload model found. [LBR-81]
+        : 'Length' table in wireload model 'Medium' is non-monotonic.
+Warning : Non-monotonic wireload model found. [LBR-81]
+        : 'Length' table in wireload model 'Medium' is non-monotonic.
+Warning : Non-monotonic wireload model found. [LBR-81]
+        : 'Length' table in wireload model 'Small' is non-monotonic.
+Warning : Non-monotonic wireload model found. [LBR-81]
+        : 'Length' table in wireload model 'Small' is non-monotonic.
+Warning : Non-monotonic wireload model found. [LBR-81]
+        : 'Length' table in wireload model 'Small' is non-monotonic.
+Info    : Elaborating Design. [ELAB-1]
+        : Elaborating top-level block 'ibex_core' from file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_core.sv'.
+Warning : Using default parameter value for module elaboration. [CDFG-818]
+        : Elaborating block 'ibex_core' with default parameters value.
+Warning : Unreachable statements for case item. [CDFG-472]
+        : Case item 'default' in module 'ibex_if_stage_DmHaltAddr437323776_DmExceptionAddr437323784_DummyInstructions0_ICache0_ICacheECC0_BusSizeECC32_TagSizeECC22_LineSizeECC64_PCIncrCheck0_ResetAll0_RndCnstLfsrSeedn1403831308_RndCnstLfsrPermx1e35ecba467fd1b12e958152c04fa43878a8daed_BranchPredictor0_MemECC0_MemDataWidth32' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_if_stage.sv' on line 193.
+Warning : Unreachable statements for case item. [CDFG-472]
+        : Case item 'default' in module 'ibex_compressed_decoder' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_compressed_decoder.sv' on line 46.
+Warning : Unreachable statements for case item. [CDFG-472]
+        : Case item 'default' in module 'ibex_compressed_decoder' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_compressed_decoder.sv' on line 143.
+Warning : Unreachable statements for case item. [CDFG-472]
+        : Case item 'default' in module 'ibex_compressed_decoder' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_compressed_decoder.sv' on line 125.
+Warning : Unreachable statements for case item. [CDFG-472]
+        : Case item 'default' in module 'ibex_compressed_decoder' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_compressed_decoder.sv' on line 87.
+Warning : Unreachable statements for case item. [CDFG-472]
+        : Case item 'default' in module 'ibex_compressed_decoder' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_compressed_decoder.sv' on line 209.
+Warning : Unreachable statements for case item. [CDFG-472]
+        : Case item 'default' in module 'ibex_compressed_decoder' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_compressed_decoder.sv' on line 43.
+Warning : Unreachable statements for case item. [CDFG-472]
+        : Case item 'default' in module 'ibex_id_stage_RV32E0_RV32M2_RV32B0_DataIndTiming0_BranchTargetALU0_WritebackStage0_BranchPredictor0_MemECC0' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_id_stage.sv' on line 304.
+Warning : Unreachable statements for case item. [CDFG-472]
+        : Case item 'default' in module 'ibex_id_stage_RV32E0_RV32M2_RV32B0_DataIndTiming0_BranchTargetALU0_WritebackStage0_BranchPredictor0_MemECC0' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_id_stage.sv' on line 411.
+Warning : Unreachable statements for case item. [CDFG-472]
+        : Case item 'default' in module 'ibex_decoder_RV32E0_RV32M2_RV32B0_BranchTargetALU0' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_decoder.sv' on line 354.
+Warning : Unreachable statements for case item. [CDFG-472]
+        : Case item 'default' in module 'ibex_decoder_RV32E0_RV32M2_RV32B0_BranchTargetALU0' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_decoder.sv' on line 823.
+Warning : Unreachable statements for case item. [CDFG-472]
+        : Case item 'default' in module 'ibex_id_stage_RV32E0_RV32M2_RV32B0_DataIndTiming0_BranchTargetALU0_WritebackStage0_BranchPredictor0_MemECC0' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_id_stage.sv' on line 795.
+Warning : Removing unused register. [CDFG-508]
+        : Removing unused latch register 'unused_shift_result_ext' in module 'ibex_alu_RV32B0' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_alu.sv' on line 352.
+        : Genus removes the flip-flop or latch inferred for an unused signal or variable. To preserve the flip-flop or latch, set the hdl_preserve_unused_registers attribute to true or use a pragma in the RTL.
+Warning : Unreachable statements for case item. [CDFG-472]
+        : Case item 'default' in module 'ibex_multdiv_fast_RV32M2' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_multdiv_fast.sv' on line 293.
+Warning : Unreachable statements for case item. [CDFG-472]
+        : Case item 'default' in module 'ibex_load_store_unit_MemECC0_MemDataWidth32' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_load_store_unit.sv' on line 121.
+Warning : Unreachable statements for case item. [CDFG-472]
+        : Case item 'default' in module 'ibex_load_store_unit_MemECC0_MemDataWidth32' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_load_store_unit.sv' on line 129.
+Warning : Unreachable statements for case item. [CDFG-472]
+        : Case item 'default' in module 'ibex_load_store_unit_MemECC0_MemDataWidth32' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_load_store_unit.sv' on line 141.
+Warning : Unreachable statements for case item. [CDFG-472]
+        : Case item 'default' in module 'ibex_load_store_unit_MemECC0_MemDataWidth32' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_load_store_unit.sv' on line 155.
+Warning : Unreachable statements for case item. [CDFG-472]
+        : Case item 'default' in module 'ibex_load_store_unit_MemECC0_MemDataWidth32' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_load_store_unit.sv' on line 118.
+Warning : Unreachable statements for case item. [CDFG-472]
+        : Case item 'default' in module 'ibex_load_store_unit_MemECC0_MemDataWidth32' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_load_store_unit.sv' on line 175.
+Warning : Unreachable statements for case item. [CDFG-472]
+        : Case item 'default' in module 'ibex_load_store_unit_MemECC0_MemDataWidth32' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_load_store_unit.sv' on line 228.
+Warning : Maximum message print count reached. [MESG-11]
+        : Maximum print count of '20' reached for message 'CDFG-472'.
+Info    : Done Elaborating Design. [ELAB-3]
+        : Done elaborating 'ibex_core'.
+Checking for analog nets...
+Check completed for analog nets.
+Checking for source RTL...
+Check completed for source RTL.
+Running Unified Mux Engine Tricks...
+Completed Unified Mux Engine Tricks
+
+Stage: post_elab
+--------------------------------------------------------
+| Trick             | Accepts | Rejects | Runtime (ms) | 
+--------------------------------------------------------
+| ume_constant_bmux |       0 |       0 |         1.00 | 
+| ume_merge         |       0 |       0 |         0.00 | 
+| ume_ssm           |       2 |       0 |        47.00 | 
+| ume_cse           |       1 |       0 |        67.00 | 
+| ume_shrink        |       7 |       0 |         7.00 | 
+| ume_sweep         |       0 |       0 |         1.00 | 
+| ume_constant_bmux |       0 |       0 |         0.00 | 
+| ume_merge         |       0 |       0 |         0.00 | 
+| ume_ssm           |       0 |       0 |         6.00 | 
+| ume_cse           |       0 |       0 |        31.00 | 
+| ume_shrink        |       0 |       0 |         1.00 | 
+| ume_sweep         |       0 |       0 |         1.00 | 
+--------------------------------------------------------
+Starting optimize datapath shifters [v1.0] (stage: post_elab, startdef: ibex_core, recur: true)
+Completed optimize datapath shifters (accepts: 0, rejects: 0, runtime: 0.001s)
+Starting clip mux common data inputs [v1.0] (stage: post_elab, startdef: ibex_core, recur: true)
+Completed clip mux common data inputs (accepts: 0, rejects: 0, runtime: 0.001s)
+Starting clip the non-user hierarchies [v2.0] (stage: post_elab, startdef: ibex_core, recur: true)
+Completed clip the non-user hierarchies (accepts: 1, rejects: 0, runtime: 0.017s)
+Starting basic netlist cleanup [v1.0] (stage: post_elab, startdef: ibex_core, recur: true)
+Completed basic netlist cleanup (accepts: 0, rejects: 0, runtime: 0.001s)
+
+Stage: post_elab
+---------------------------------------------------------------------
+| Transform                      | Accepts | Rejects | Runtime (ms) | 
+---------------------------------------------------------------------
+| hlo_optimize_datapath_shifters |       0 |       0 |         1.00 | 
+| hlo_clip_mux_input             |       0 |       0 |         1.00 | 
+| hlo_clip                       |       1 |       0 |        17.00 | 
+| hlo_cleanup                    |       0 |       0 |         1.00 | 
+---------------------------------------------------------------------
+UM:   flow.cputime  flow.realtime  timing.setup.tns  timing.setup.wns  snapshot
+UM:*                                                                   elaborate
+design:ibex_core
+@genus:root: 18> exit
+
+Lic Summary:
+[17:52:23.384648] Cdslmd servers: vm-fsemi-edu02-h4l0gt0b
+[17:52:23.384675] Feature usage summary:
+[17:52:23.384675] Genus_Synthesis
+
+Normal exit.

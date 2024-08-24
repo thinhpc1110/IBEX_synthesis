@@ -1,0 +1,198 @@
+Cadence Genus(TM) Synthesis Solution.
+Copyright 2023 Cadence Design Systems, Inc. All rights reserved worldwide.
+Cadence and the Cadence logo are registered trademarks and Genus is a trademark
+of Cadence Design Systems, Inc. in the United States and other countries.
+
+[17:41:18.445873] Configured Lic search path (21.01-s002): 5280@192.168.32.10
+
+Version: 22.12-s082_1, built Sat May 06 04:39:19 PDT 2023
+Options: 
+Date:    Wed Aug 21 17:41:18 2024
+Host:    edabk.server1 (x86_64 w/Linux 3.10.0-1160.108.1.el7.x86_64) (24cores*48cpus*2physical cpus*AMD EPYC 7402 24-Core Processor 512KB) (395944776KB)
+PID:     30013
+OS:      CentOS Linux release 7.9.2009 (Core)
+
+Checking out license: Genus_Synthesis
+[17:41:19.436498] Periodic Lic check successful
+[17:41:19.436520] Feature usage summary:
+[17:41:19.436521] Genus_Synthesis
+
+
+
+***********************************************************************************************************
+***********************************************************************************************************
+
+
+
+Finished executable startup (3 seconds elapsed).
+
+Loading tool scripts...
+Finished loading tool scripts (15 seconds elapsed).
+
+WARNING: This version of the tool is 472 days old.
+@genus:root: 1> source genus_script_IBEX.tcl
+Sourcing './genus_script_IBEX.tcl' (Wed Aug 21 17:41:49 +07 2024)...
+#@ Begin verbose source ./genus_script_IBEX.tcl
+@file(genus_script_IBEX.tcl) 2: set fd_sclib ../../sky130_fd_sc_hd/lib
+@file(genus_script_IBEX.tcl) 3: set osu_t18lib ../../sky130_osu_sc_t18/18T_hs/lib
+@file(genus_script_IBEX.tcl) 4: set osu_t12lib ../../sky130_osu_sc_t12/12T_hs/lib
+@file(genus_script_IBEX.tcl) 5: set_db init_lib_search_path [list $fd_sclib $osu_t18lib $osu_t12lib]
+  Setting attribute of root '/': 'init_lib_search_path' = ../../sky130_fd_sc_hd/lib ../../sky130_osu_sc_t18/18T_hs/lib ../../sky130_osu_sc_t12/12T_hs/lib
+@file(genus_script_IBEX.tcl) 7: set search_path [list "./" ]
+@file(genus_script_IBEX.tcl) 8: lappend search_path $fd_sclib
+@file(genus_script_IBEX.tcl) 9: lappend search_path $osu_t18lib 
+@file(genus_script_IBEX.tcl) 10: lappend search_path $osu_t12lib 
+@file(genus_script_IBEX.tcl) 11: lappend search_path /home/usr8/work_space/sky130_cds/synth/rtl_IBEX
+@file(genus_script_IBEX.tcl) 13: set_db init_hdl_search_path $search_path
+  Setting attribute of root '/': 'init_hdl_search_path' = ./ ../../sky130_fd_sc_hd/lib ../../sky130_osu_sc_t18/18T_hs/lib ../../sky130_osu_sc_t12/12T_hs/lib /home/usr8/work_space/sky130_cds/synth/rtl_IBEX
+@file(genus_script_IBEX.tcl) 16: read_libs [list sky130_fd_sc_hd__tt_100C_1v80.lib sky130_osu_sc_18T_hs_tt_1P80_100C.ccs.lib]
+
+  Message Summary for Library both libraries:
+  *******************************************
+  An unsupported construct was detected in this library. [LBR-40]: 13
+  *******************************************
+ 
+Info    : Created nominal operating condition. [LBR-412]
+        : Operating condition '_nominal_' was created for the PVT values (1.000000, 1.800000, 100.000000) in library 'sky130_fd_sc_hd__tt_100C_1v80.lib'.
+        : The nominal operating condition is represented, either by the nominal PVT values specified in the library source (via nom_process,nom_voltage and nom_temperature respectively), or by the default PVT values (1.0,1.0,1.0).
+Info    : Created nominal operating condition. [LBR-412]
+        : Operating condition '_nominal_' was created for the PVT values (1.000000, 1.800000, 100.000000) in library 'sky130_osu_sc_18T_hs_tt_1P80_100C.ccs.lib'.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'sky130_osu_sc_18T_hs__ant' must have an output pin.
+        : Add the missing output pin(s), then reload the library. Else the library cell will be marked as timing model i.e. unusable. Timing_model means that the cell does not have any defined function. If there is no output pin, Genus will mark library cell as unusable i.e. the attribute 'usable' will be marked to 'false' on the libcell. Therefore, the cell is not used for mapping and it will not be picked up from the library for synthesis. If you query the attribute 'unusable_reason' on the libcell; result will be: 'Library cell has no output pins.'Note: The message LBR-9 is only for the logical pins and not for the power_ground pins. Genus will depend upon the output function defined in the pin group (output pin) of the cell, to use it for mapping. The pg_pin will not have any function defined.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'sky130_osu_sc_18T_hs__ant' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'sky130_fd_sc_hd__decap_12' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'sky130_fd_sc_hd__decap_12' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'sky130_fd_sc_hd__decap_3' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'sky130_fd_sc_hd__decap_3' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'sky130_fd_sc_hd__decap_4' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'sky130_fd_sc_hd__decap_4' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'sky130_fd_sc_hd__decap_6' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'sky130_fd_sc_hd__decap_6' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'sky130_fd_sc_hd__decap_8' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'sky130_fd_sc_hd__decap_8' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'sky130_fd_sc_hd__diode_2' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'sky130_fd_sc_hd__diode_2' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'sky130_fd_sc_hd__lpflow_bleeder_1' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'sky130_fd_sc_hd__lpflow_bleeder_1' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'sky130_fd_sc_hd__lpflow_decapkapwr_12' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'sky130_fd_sc_hd__lpflow_decapkapwr_12' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'sky130_fd_sc_hd__lpflow_decapkapwr_3' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'sky130_fd_sc_hd__lpflow_decapkapwr_3' must have an output pin.
+Warning : Maximum message print count reached. [MESG-11]
+        : Maximum print count of '20' reached for message 'LBR-9'.
+@file(genus_script_IBEX.tcl) 19: set my_verilog_files [list prim_assert.sv ibex_alu.sv ibex_branch_predict.sv ibex_compressed_decoder.sv ibex_controller.sv ibex_cs_registers.sv ibex_csr.sv ibex_counter.sv ibex_decoder.sv ibex_ex_block.sv ibex_fetch_fifo.sv ibex_id_stage.sv ibex_if_stage.sv ibex_load_store_unit.sv ibex_multdiv_fast.sv ibex_multdiv_slow.sv ibex_prefetch_buffer.sv ibex_pmp.sv ibex_wb_stage.sv ibex_dummy_instr.sv ibex_core.sv ] 
+@file(genus_script_IBEX.tcl) 21: set my_toplevel "ibex_core"
+@file(genus_script_IBEX.tcl) 22: read_hdl -language sv $my_verilog_files
+package ibex_pkg;
+                |
+Warning : Ignoring duplicate package definition. [VLOGPT-601]
+        : Ignoring definition of package 'ibex_pkg' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_pkg.sv' on line 9, column 17.
+package ibex_pkg;
+                |
+Warning : Ignoring duplicate package definition. [VLOGPT-601]
+        : Ignoring definition of package 'ibex_pkg' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_pkg.sv' on line 9, column 17.
+  `DV_FCOV_SIGNAL(logic, debug_wakeup, (ctrl_fsm_cs == SLEEP) & (ctrl_fsm_ns == FIRST_FETCH) &
+                |
+Error   : Reference to undefined macro. [VLOGPT-631] [read_hdl]
+        : Macro 'DV_FCOV_SIGNAL' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_controller.sv' on line 904, column 17.
+        : Error encountered during Verilog parsing. Make sure all paths of include files have been specified in the init_hdl_search_path attribute. Also, check whether you need to specify the -define option of the read_hdl command.
+  `DV_FCOV_SIGNAL(logic, debug_wakeup, (ctrl_fsm_cs == SLEEP) & (ctrl_fsm_ns == FIRST_FETCH) &
+  |
+Error   : Parsing error. [VLOGPT-1] [read_hdl]
+        : in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_controller.sv' on line 904, column 3.
+        : Invalid Verilog syntax is parsed, or unsupported Verilog syntax is encountered.
+  `DV_FCOV_SIGNAL(logic, debug_wakeup, (ctrl_fsm_cs == SLEEP) & (ctrl_fsm_ns == FIRST_FETCH) &
+  |
+Error   : Parsing error. [VLOGPT-1] [read_hdl]
+        : Expecting token ';', found '(' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_controller.sv' on line 904, column 3.
+  localparam int unsigned RV32BExtra   = (RV32B != RV32BNone) ? 1 : 0;
+                                          |
+Error   : Reference to undeclared variable. A variable/parameter must be declared before it is referenced. [VLOGPT-20] [read_hdl]
+        : Symbol 'RV32B' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_cs_registers.sv' on line 143, column 43.
+        : Verilog module is using a parameter that is not defined in the module. You will get a notification for this, if you read the verilog file using the read_hdl command.
+  localparam int unsigned RV32BExtra   = (RV32B != RV32BNone) ? 1 : 0;
+                                          |
+Error   : Reference to undeclared variable. A variable/parameter must be declared before it is referenced. [VLOGPT-20] [read_hdl]
+        : Symbol 'RV32B' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_cs_registers.sv' on line 143, column 43.
+  localparam int unsigned RV32MEnabled = (RV32M == RV32MNone) ? 0 : 1;
+                                          |
+Error   : Reference to undeclared variable. A variable/parameter must be declared before it is referenced. [VLOGPT-20] [read_hdl]
+        : Symbol 'RV32M' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_cs_registers.sv' on line 144, column 43.
+  localparam int unsigned RV32MEnabled = (RV32M == RV32MNone) ? 0 : 1;
+                                          |
+Error   : Reference to undeclared variable. A variable/parameter must be declared before it is referenced. [VLOGPT-20] [read_hdl]
+        : Symbol 'RV32M' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_cs_registers.sv' on line 144, column 43.
+  localparam int unsigned PMPAddrWidth = (PMPGranularity > 0) ? 33 - PMPGranularity : 32;
+                                          |
+Error   : Reference to undeclared variable. A variable/parameter must be declared before it is referenced. [VLOGPT-20] [read_hdl]
+        : Symbol 'PMPGranularity' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_cs_registers.sv' on line 145, column 43.
+  localparam int unsigned PMPAddrWidth = (PMPGranularity > 0) ? 33 - PMPGranularity : 32;
+                                                                     |
+Error   : Reference to undeclared variable. A variable/parameter must be declared before it is referenced. [VLOGPT-20] [read_hdl]
+        : Symbol 'PMPGranularity' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_cs_registers.sv' on line 145, column 70.
+  localparam int unsigned PMPAddrWidth = (PMPGranularity > 0) ? 33 - PMPGranularity : 32;
+                                          |
+Error   : Reference to undeclared variable. A variable/parameter must be declared before it is referenced. [VLOGPT-20] [read_hdl]
+        : Symbol 'PMPGranularity' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_cs_registers.sv' on line 145, column 43.
+  localparam int unsigned PMPAddrWidth = (PMPGranularity > 0) ? 33 - PMPGranularity : 32;
+                                                                     |
+Error   : Reference to undeclared variable. A variable/parameter must be declared before it is referenced. [VLOGPT-20] [read_hdl]
+        : Symbol 'PMPGranularity' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_cs_registers.sv' on line 145, column 70.
+    | (32'(RV32E)        <<  4)  // E - RV32E base ISA
+           |
+Error   : Reference to undeclared variable. A variable/parameter must be declared before it is referenced. [VLOGPT-20] [read_hdl]
+        : Symbol 'RV32E' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_cs_registers.sv' on line 153, column 12.
+    | (32'(!RV32E)       <<  8)  // I - RV32I/64I/128I base ISA
+            |
+Error   : Reference to undeclared variable. A variable/parameter must be declared before it is referenced. [VLOGPT-20] [read_hdl]
+        : Symbol 'RV32E' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_cs_registers.sv' on line 155, column 13.
+    | (32'(RV32E)        <<  4)  // E - RV32E base ISA
+           |
+Error   : Reference to undeclared variable. A variable/parameter must be declared before it is referenced. [VLOGPT-20] [read_hdl]
+        : Symbol 'RV32E' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_cs_registers.sv' on line 153, column 12.
+    | (32'(!RV32E)       <<  8)  // I - RV32I/64I/128I base ISA
+            |
+Error   : Reference to undeclared variable. A variable/parameter must be declared before it is referenced. [VLOGPT-20] [read_hdl]
+        : Symbol 'RV32E' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_cs_registers.sv' on line 155, column 13.
+  logic [MHPMCounterNum+3-1:0] mcountinhibit_d, mcountinhibit_q;
+         |
+Error   : Reference to undeclared variable. A variable/parameter must be declared before it is referenced. [VLOGPT-20] [read_hdl]
+        : Symbol 'MHPMCounterNum' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_cs_registers.sv' on line 253, column 10.
+  assign csr_addr           = {csr_addr_i};
+                               |
+Error   : Reference to undeclared variable. A variable/parameter must be declared before it is referenced. [VLOGPT-20] [read_hdl]
+        : Symbol 'csr_addr_i' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_cs_registers.sv' on line 308, column 32.
+  assign illegal_csr_dbg    = dbg_csr & ~debug_mode_i;
+                                         |
+Error   : Reference to undeclared variable. A variable/parameter must be declared before it is referenced. [VLOGPT-20] [read_hdl]
+        : Symbol 'debug_mode_i' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_cs_registers.sv' on line 312, column 42.
+  assign illegal_csr_insn_o = csr_access_i & (illegal_csr | illegal_csr_write | illegal_csr_priv |
+                              |
+Error   : Reference to undeclared variable. A variable/parameter must be declared before it is referenced. [VLOGPT-20] [read_hdl]
+        : Symbol 'csr_access_i' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_cs_registers.sv' on line 315, column 31.
+  assign mip.irq_software = irq_software_i;
+                            |
+Error   : Reference to undeclared variable. A variable/parameter must be declared before it is referenced. [VLOGPT-20] [read_hdl]
+        : Symbol 'irq_software_i' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_cs_registers.sv' on line 319, column 29.
+#@ End verbose source ./genus_script_IBEX.tcl
+1

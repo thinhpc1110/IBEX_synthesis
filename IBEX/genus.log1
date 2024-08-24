@@ -1,0 +1,621 @@
+Cadence Genus(TM) Synthesis Solution.
+Copyright 2023 Cadence Design Systems, Inc. All rights reserved worldwide.
+Cadence and the Cadence logo are registered trademarks and Genus is a trademark
+of Cadence Design Systems, Inc. in the United States and other countries.
+
+[06:45:27.445889] Configured Lic search path (21.01-s002): 5280@192.168.32.10
+
+Version: 22.12-s082_1, built Sat May 06 04:39:19 PDT 2023
+Options: 
+Date:    Wed Aug 21 06:45:27 2024
+Host:    edabk.server1 (x86_64 w/Linux 3.10.0-1160.108.1.el7.x86_64) (24cores*48cpus*2physical cpus*AMD EPYC 7402 24-Core Processor 512KB) (395944776KB)
+PID:     18013
+OS:      CentOS Linux release 7.9.2009 (Core)
+
+Checking out license: Genus_Synthesis
+[06:45:27.438184] Periodic Lic check successful
+[06:45:27.438202] Feature usage summary:
+[06:45:27.438202] Genus_Synthesis
+
+
+
+***********************************************************************************************************
+***********************************************************************************************************
+
+
+
+Finished executable startup (2 seconds elapsed).
+
+Loading tool scripts...
+Finished loading tool scripts (12 seconds elapsed).
+
+WARNING: This version of the tool is 472 days old.
+@genus:root: 1> ll
+Total: 9 items
+./                          (root)
+commands/                  
+designs/                   
+flows/                     
+hdl_libraries/             
+libraries/                 
+messages/                  
+obj_types/                 
+tech/                      
+@genus:root: 2> source genus_script_IBEX.tcl
+Sourcing './genus_script_IBEX.tcl' (Wed Aug 21 06:47:10 +07 2024)...
+#@ Begin verbose source ./genus_script_IBEX.tcl
+@file(genus_script_IBEX.tcl) 2: set fd_sclib ../../sky130_fd_sc_hd/lib
+@file(genus_script_IBEX.tcl) 3: set osu_t18lib ../../sky130_osu_sc_t18/18T_hs/lib
+@file(genus_script_IBEX.tcl) 4: set osu_t12lib ../../sky130_osu_sc_t12/12T_hs/lib
+@file(genus_script_IBEX.tcl) 5: set_db init_lib_search_path [list $fd_sclib $osu_t18lib $osu_t12lib]
+  Setting attribute of root '/': 'init_lib_search_path' = ../../sky130_fd_sc_hd/lib ../../sky130_osu_sc_t18/18T_hs/lib ../../sky130_osu_sc_t12/12T_hs/lib
+@file(genus_script_IBEX.tcl) 7: set search_path [list "./" ]
+@file(genus_script_IBEX.tcl) 8: lappend search_path $fd_sclib
+@file(genus_script_IBEX.tcl) 9: lappend search_path $osu_t18lib 
+@file(genus_script_IBEX.tcl) 10: lappend search_path $osu_t12lib 
+@file(genus_script_IBEX.tcl) 11: lappend search_path /home/usr8/work_space/sky130_cds/synth/rtl_IBEX
+@file(genus_script_IBEX.tcl) 13: set_db init_hdl_search_path $search_path
+  Setting attribute of root '/': 'init_hdl_search_path' = ./ ../../sky130_fd_sc_hd/lib ../../sky130_osu_sc_t18/18T_hs/lib ../../sky130_osu_sc_t12/12T_hs/lib /home/usr8/work_space/sky130_cds/synth/rtl_IBEX
+@file(genus_script_IBEX.tcl) 16: read_libs [list sky130_fd_sc_hd__tt_100C_1v80.lib sky130_osu_sc_18T_hs_tt_1P80_100C.ccs.lib]
+
+  Message Summary for Library both libraries:
+  *******************************************
+  An unsupported construct was detected in this library. [LBR-40]: 13
+  *******************************************
+ 
+Info    : Created nominal operating condition. [LBR-412]
+        : Operating condition '_nominal_' was created for the PVT values (1.000000, 1.800000, 100.000000) in library 'sky130_fd_sc_hd__tt_100C_1v80.lib'.
+        : The nominal operating condition is represented, either by the nominal PVT values specified in the library source (via nom_process,nom_voltage and nom_temperature respectively), or by the default PVT values (1.0,1.0,1.0).
+Info    : Created nominal operating condition. [LBR-412]
+        : Operating condition '_nominal_' was created for the PVT values (1.000000, 1.800000, 100.000000) in library 'sky130_osu_sc_18T_hs_tt_1P80_100C.ccs.lib'.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'sky130_osu_sc_18T_hs__ant' must have an output pin.
+        : Add the missing output pin(s), then reload the library. Else the library cell will be marked as timing model i.e. unusable. Timing_model means that the cell does not have any defined function. If there is no output pin, Genus will mark library cell as unusable i.e. the attribute 'usable' will be marked to 'false' on the libcell. Therefore, the cell is not used for mapping and it will not be picked up from the library for synthesis. If you query the attribute 'unusable_reason' on the libcell; result will be: 'Library cell has no output pins.'Note: The message LBR-9 is only for the logical pins and not for the power_ground pins. Genus will depend upon the output function defined in the pin group (output pin) of the cell, to use it for mapping. The pg_pin will not have any function defined.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'sky130_osu_sc_18T_hs__ant' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'sky130_fd_sc_hd__decap_12' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'sky130_fd_sc_hd__decap_12' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'sky130_fd_sc_hd__decap_3' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'sky130_fd_sc_hd__decap_3' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'sky130_fd_sc_hd__decap_4' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'sky130_fd_sc_hd__decap_4' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'sky130_fd_sc_hd__decap_6' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'sky130_fd_sc_hd__decap_6' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'sky130_fd_sc_hd__decap_8' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'sky130_fd_sc_hd__decap_8' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'sky130_fd_sc_hd__diode_2' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'sky130_fd_sc_hd__diode_2' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'sky130_fd_sc_hd__lpflow_bleeder_1' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'sky130_fd_sc_hd__lpflow_bleeder_1' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'sky130_fd_sc_hd__lpflow_decapkapwr_12' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'sky130_fd_sc_hd__lpflow_decapkapwr_12' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'sky130_fd_sc_hd__lpflow_decapkapwr_3' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'sky130_fd_sc_hd__lpflow_decapkapwr_3' must have an output pin.
+Warning : Maximum message print count reached. [MESG-11]
+        : Maximum print count of '20' reached for message 'LBR-9'.
+@file(genus_script_IBEX.tcl) 19: set my_verilog_files [list prim_assert.sv ibex_alu.sv ibex_branch_predict.sv ibex_compressed_decoder.sv ibex_controller.sv ibex_cs_registers.sv ibex_csr.sv ibex_counter.sv ibex_decoder.sv ibex_ex_block.sv ibex_fetch_fifo.sv ibex_id_stage.sv ibex_if_stage.sv ibex_load_store_unit.sv ibex_multdiv_fast.sv ibex_multdiv_slow.sv ibex_prefetch_buffer.sv ibex_pmp.sv ibex_wb_stage.sv ibex_dummy_instr.sv ibex_core.sv ] 
+@file(genus_script_IBEX.tcl) 21: set my_toplevel "ibex_core"
+@file(genus_script_IBEX.tcl) 22: read_hdl -language sv $my_verilog_files
+ `include "prim_assert_dummy_macros.svh"
+                                       |
+Warning : Cannot open file. [VLOGPT-650]
+        : File 'prim_assert_dummy_macros.svh' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/prim_assert.sv' on line 105, column 40.
+        : The specified file could not be opened.  Check the value of the init_hdl_search_path attribute.
+`include "prim_assert_sec_cm.svh"
+                                |
+Warning : Cannot open file. [VLOGPT-650]
+        : File 'prim_assert_sec_cm.svh' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/prim_assert.sv' on line 185, column 33.
+package ibex_pkg;
+                |
+Warning : Ignoring duplicate package definition. [VLOGPT-601]
+        : Ignoring definition of package 'ibex_pkg' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_pkg.sv' on line 9, column 17.
+  `ASSERT(BranchInsTypeOneHot, (fetch_valid_i) |-> ($onehot0({instr_j, instr_b, instr_cj, instr_cb})), clk_i, !rst_ni)
+        |
+Error   : Reference to undefined macro. [VLOGPT-631] [read_hdl]
+        : Macro 'ASSERT' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_branch_predict.sv' on line 92, column 9.
+        : Error encountered during Verilog parsing. Make sure all paths of include files have been specified in the init_hdl_search_path attribute. Also, check whether you need to specify the -define option of the read_hdl command.
+  (BranchIBranchInsTypeOneHot, (fetch_valid_i) |-> ($onehot0({instr_j, instr_b, instr_cj, instr_cb})), clk_i, !rst_ni)
+  |
+Error   : Parsing error. [VLOGPT-1] [read_hdl]
+        : in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_branch_predict.sv' on line 92, column 3.
+        : Invalid Verilog syntax is parsed, or unsupported Verilog syntax is encountered.
+  (BranchIBranchInsTypeOneHot, (fetch_valid_i) |-> ($onehot0({instr_j, instr_b, instr_cj, instr_cb})), clk_i, !rst_ni)
+  |
+Error   : Parsing error. [VLOGPT-1] [read_hdl]
+        : Expecting token ';', found '(' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_branch_predict.sv' on line 92, column 3.
+package ibex_pkg;
+                |
+Warning : Ignoring duplicate package definition. [VLOGPT-601]
+        : Ignoring definition of package 'ibex_pkg' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_pkg.sv' on line 9, column 17.
+  `ASSERT_KNOWN(IbexInstrValidKnown, valid_i)
+              |
+Error   : Reference to undefined macro. [VLOGPT-631] [read_hdl]
+        : Macro 'ASSERT_KNOWN' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_compressed_decoder.sv' on line 287, column 15.
+  (IbexInstrValidKnown, valid_i)
+  |
+Error   : Parsing error. [VLOGPT-1] [read_hdl]
+        : in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_compressed_decoder.sv' on line 287, column 3.
+  (IbexInstrValidKnown, valid_i)
+  |
+Error   : Parsing error. [VLOGPT-1] [read_hdl]
+        : Expecting token ';', found '(' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_compressed_decoder.sv' on line 287, column 3.
+  assign load_err_d  = load_err_i;
+                       |
+Error   : Reference to undeclared variable. A variable/parameter must be declared before it is referenced. [VLOGPT-20] [read_hdl]
+        : Symbol 'load_err_i' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_controller.sv' on line 187, column 24.
+        : Verilog module is using a parameter that is not defined in the module. You will get a notification for this, if you read the verilog file using the read_hdl command.
+  assign store_err_d = store_err_i;
+                       |
+Error   : Reference to undeclared variable. A variable/parameter must be declared before it is referenced. [VLOGPT-20] [read_hdl]
+        : Symbol 'store_err_i' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_controller.sv' on line 188, column 24.
+  assign ecall_insn      = ecall_insn_i      & instr_valid_i;
+                           |
+Error   : Reference to undeclared variable. A variable/parameter must be declared before it is referenced. [VLOGPT-20] [read_hdl]
+        : Symbol 'ecall_insn_i' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_controller.sv' on line 191, column 28.
+  assign ecall_insn      = ecall_insn_i      & instr_valid_i;
+                                               |
+Error   : Reference to undeclared variable. A variable/parameter must be declared before it is referenced. [VLOGPT-20] [read_hdl]
+        : Symbol 'instr_valid_i' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_controller.sv' on line 191, column 48.
+  assign mret_insn       = mret_insn_i       & instr_valid_i;
+                           |
+Error   : Reference to undeclared variable. A variable/parameter must be declared before it is referenced. [VLOGPT-20] [read_hdl]
+        : Symbol 'mret_insn_i' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_controller.sv' on line 192, column 28.
+  assign mret_insn       = mret_insn_i       & instr_valid_i;
+                                               |
+Error   : Reference to undeclared variable. A variable/parameter must be declared before it is referenced. [VLOGPT-20] [read_hdl]
+        : Symbol 'instr_valid_i' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_controller.sv' on line 192, column 48.
+  assign dret_insn       = dret_insn_i       & instr_valid_i;
+                           |
+Error   : Reference to undeclared variable. A variable/parameter must be declared before it is referenced. [VLOGPT-20] [read_hdl]
+        : Symbol 'dret_insn_i' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_controller.sv' on line 193, column 28.
+  assign dret_insn       = dret_insn_i       & instr_valid_i;
+                                               |
+Error   : Reference to undeclared variable. A variable/parameter must be declared before it is referenced. [VLOGPT-20] [read_hdl]
+        : Symbol 'instr_valid_i' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_controller.sv' on line 193, column 48.
+  assign wfi_insn        = wfi_insn_i        & instr_valid_i;
+                           |
+Error   : Reference to undeclared variable. A variable/parameter must be declared before it is referenced. [VLOGPT-20] [read_hdl]
+        : Symbol 'wfi_insn_i' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_controller.sv' on line 194, column 28.
+  assign wfi_insn        = wfi_insn_i        & instr_valid_i;
+                                               |
+Error   : Reference to undeclared variable. A variable/parameter must be declared before it is referenced. [VLOGPT-20] [read_hdl]
+        : Symbol 'instr_valid_i' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_controller.sv' on line 194, column 48.
+  assign ebrk_insn       = ebrk_insn_i       & instr_valid_i;
+                           |
+Error   : Reference to undeclared variable. A variable/parameter must be declared before it is referenced. [VLOGPT-20] [read_hdl]
+        : Symbol 'ebrk_insn_i' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_controller.sv' on line 195, column 28.
+  assign ebrk_insn       = ebrk_insn_i       & instr_valid_i;
+                                               |
+Error   : Reference to undeclared variable. A variable/parameter must be declared before it is referenced. [VLOGPT-20] [read_hdl]
+        : Symbol 'instr_valid_i' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_controller.sv' on line 195, column 48.
+  assign csr_pipe_flush  = csr_pipe_flush_i  & instr_valid_i;
+                           |
+Error   : Reference to undeclared variable. A variable/parameter must be declared before it is referenced. [VLOGPT-20] [read_hdl]
+        : Symbol 'csr_pipe_flush_i' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_controller.sv' on line 196, column 28.
+  assign csr_pipe_flush  = csr_pipe_flush_i  & instr_valid_i;
+                                               |
+Error   : Reference to undeclared variable. A variable/parameter must be declared before it is referenced. [VLOGPT-20] [read_hdl]
+        : Symbol 'instr_valid_i' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_controller.sv' on line 196, column 48.
+#@ End verbose source ./genus_script_IBEX.tcl
+1
+@genus:root: 3> man read_hdl
+@genus:root: 4> 
+@genus:root: 4> hdl_language
+invalid command name "hdl_language"
+@genus:root: 5> man hdl_language
+@genus:root: 6> read_hdl -language sv $my_verilog_files
+ `include "prim_assert_dummy_macros.svh"
+                                       |
+Warning : Cannot open file. [VLOGPT-650]
+        : File 'prim_assert_dummy_macros.svh' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/prim_assert.sv' on line 105, column 40.
+package ibex_pkg;
+                |
+Warning : Ignoring duplicate package definition. [VLOGPT-601]
+        : Ignoring definition of package 'ibex_pkg' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_pkg.sv' on line 9, column 17.
+module ibex_alu #(
+              |
+Warning : Replacing previously read Verilog description. [VLOGPT-6]
+        : Replacing Verilog description 'ibex_alu' with Verilog module in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_alu.sv' on line 14, column 15.
+        : A Verilog description is replaced when a new description of the same name and same library is read again.
+    Verilog descriptions are:
+       module
+       macromodule
+       configuration
+    SystemVerilog adds the following descriptions:
+       interface
+       program
+       package.
+package ibex_pkg;
+                |
+Warning : Ignoring duplicate package definition. [VLOGPT-601]
+        : Ignoring definition of package 'ibex_pkg' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_pkg.sv' on line 9, column 17.
+  `ASSERT(BranchInsTypeOneHot, (fetch_valid_i) |-> ($onehot0({instr_j, instr_b, instr_cj, instr_cb})), clk_i, !rst_ni)
+        |
+Error   : Reference to undefined macro. [VLOGPT-631] [read_hdl]
+        : Macro 'ASSERT' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_branch_predict.sv' on line 92, column 9.
+  (BranchIBranchInsTypeOneHot, (fetch_valid_i) |-> ($onehot0({instr_j, instr_b, instr_cj, instr_cb})), clk_i, !rst_ni)
+  |
+Error   : Parsing error. [VLOGPT-1] [read_hdl]
+        : in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_branch_predict.sv' on line 92, column 3.
+  (BranchIBranchInsTypeOneHot, (fetch_valid_i) |-> ($onehot0({instr_j, instr_b, instr_cj, instr_cb})), clk_i, !rst_ni)
+  |
+Error   : Parsing error. [VLOGPT-1] [read_hdl]
+        : Expecting token ';', found '(' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_branch_predict.sv' on line 92, column 3.
+package ibex_pkg;
+                |
+Warning : Ignoring duplicate package definition. [VLOGPT-601]
+        : Ignoring definition of package 'ibex_pkg' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_pkg.sv' on line 9, column 17.
+  `ASSERT_KNOWN(IbexInstrValidKnown, valid_i)
+              |
+Error   : Reference to undefined macro. [VLOGPT-631] [read_hdl]
+        : Macro 'ASSERT_KNOWN' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_compressed_decoder.sv' on line 287, column 15.
+  (IbexInstrValidKnown, valid_i)
+  |
+Error   : Parsing error. [VLOGPT-1] [read_hdl]
+        : in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_compressed_decoder.sv' on line 287, column 3.
+  (IbexInstrValidKnown, valid_i)
+  |
+Error   : Parsing error. [VLOGPT-1] [read_hdl]
+        : Expecting token ';', found '(' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_compressed_decoder.sv' on line 287, column 3.
+  assign load_err_d  = load_err_i;
+                       |
+Error   : Reference to undeclared variable. A variable/parameter must be declared before it is referenced. [VLOGPT-20] [read_hdl]
+        : Symbol 'load_err_i' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_controller.sv' on line 187, column 24.
+  assign store_err_d = store_err_i;
+                       |
+Error   : Reference to undeclared variable. A variable/parameter must be declared before it is referenced. [VLOGPT-20] [read_hdl]
+        : Symbol 'store_err_i' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_controller.sv' on line 188, column 24.
+  assign ecall_insn      = ecall_insn_i      & instr_valid_i;
+                           |
+Error   : Reference to undeclared variable. A variable/parameter must be declared before it is referenced. [VLOGPT-20] [read_hdl]
+        : Symbol 'ecall_insn_i' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_controller.sv' on line 191, column 28.
+  assign ecall_insn      = ecall_insn_i      & instr_valid_i;
+                                               |
+Error   : Reference to undeclared variable. A variable/parameter must be declared before it is referenced. [VLOGPT-20] [read_hdl]
+        : Symbol 'instr_valid_i' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_controller.sv' on line 191, column 48.
+  assign mret_insn       = mret_insn_i       & instr_valid_i;
+                           |
+Error   : Reference to undeclared variable. A variable/parameter must be declared before it is referenced. [VLOGPT-20] [read_hdl]
+        : Symbol 'mret_insn_i' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_controller.sv' on line 192, column 28.
+  assign mret_insn       = mret_insn_i       & instr_valid_i;
+                                               |
+Error   : Reference to undeclared variable. A variable/parameter must be declared before it is referenced. [VLOGPT-20] [read_hdl]
+        : Symbol 'instr_valid_i' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_controller.sv' on line 192, column 48.
+Warning : Maximum message print count reached. [MESG-11]
+        : Maximum print count of '20' reached for message 'VLOGPT-20'.
+Warning : Replacing previously read Verilog module or VHDL entity. [HPT-76]
+        : Replacing Verilog module 'ibex_alu' in library 'default' with newly read Verilog module 'ibex_alu' in the same library in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_alu.sv' on line 14.
+        : A newly read VHDL entity replaces any previously read Verilog module or VHDL entity in the same library if its name matches (case-insensitively) the existing module or entity.
+    For instance:
+        VHDL 'foo'                  replaces  VHDL {'FOO' or 'foo' or 'Foo' or ...} in the same library
+        VHDL 'foo' (in any library) replaces  Verilog {'FOO' or 'foo' or 'Foo' or ...} in the same library
+ 
+A newly read Verilog module replaces any previously read Verilog module if its name matches (case-sensitively) that module.  Further, it replaces any previously read VHDL entity in the same library if its name matches (case -insensitively) that entity.
+    For instance:
+        Verilog 'foo' replaces    VHDL {'FOO' or 'foo' or 'Foo' or ...} in the same library
+        Verilog 'foo' replaces    Verilog 'foo' only
+    In addition:
+        Verilog 'foo' does not replace Verilog 'FOO' and the two remain as distinct modules.
+1
+@genus:root: 7> read_hdl -language sv $my_verilog_files
+package ibex_pkg;
+                |
+Warning : Ignoring duplicate package definition. [VLOGPT-601]
+        : Ignoring definition of package 'ibex_pkg' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_pkg.sv' on line 9, column 17.
+module ibex_alu #(
+              |
+Warning : Replacing previously read Verilog description. [VLOGPT-6]
+        : Replacing Verilog description 'ibex_alu' with Verilog module in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_alu.sv' on line 14, column 15.
+package ibex_pkg;
+                |
+Warning : Ignoring duplicate package definition. [VLOGPT-601]
+        : Ignoring definition of package 'ibex_pkg' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_pkg.sv' on line 9, column 17.
+package ibex_pkg;
+                |
+Warning : Ignoring duplicate package definition. [VLOGPT-601]
+        : Ignoring definition of package 'ibex_pkg' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_pkg.sv' on line 9, column 17.
+  `DV_FCOV_SIGNAL(logic, debug_wakeup, (ctrl_fsm_cs == SLEEP) & (ctrl_fsm_ns == FIRST_FETCH) &
+                |
+Error   : Reference to undefined macro. [VLOGPT-631] [read_hdl]
+        : Macro 'DV_FCOV_SIGNAL' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_controller.sv' on line 904, column 17.
+  `DV_FCOV_SIGNAL(logic, debug_wakeup, (ctrl_fsm_cs == SLEEP) & (ctrl_fsm_ns == FIRST_FETCH) &
+  |
+Error   : Parsing error. [VLOGPT-1] [read_hdl]
+        : in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_controller.sv' on line 904, column 3.
+  `DV_FCOV_SIGNAL(logic, debug_wakeup, (ctrl_fsm_cs == SLEEP) & (ctrl_fsm_ns == FIRST_FETCH) &
+  |
+Error   : Parsing error. [VLOGPT-1] [read_hdl]
+        : Expecting token ';', found '(' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_controller.sv' on line 904, column 3.
+Warning : Replacing previously read Verilog module or VHDL entity. [HPT-76]
+        : Replacing Verilog module 'ibex_alu' in library 'default' with newly read Verilog module 'ibex_alu' in the same library in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_alu.sv' on line 14.
+1
+@genus:root: 8> read_hdl -language sv $my_verilog_files
+`define ASSERT_AT_RESET(__name, __prop, __rst = `ASSERT_DEFAULT_RST)
+                                                                  |
+Error   : Reference to undefined macro. [VLOGPT-631] [read_hdl]
+        : Macro 'ASSERT_DEFAULT_RST' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/prim_assert_dummy_macros.svh' on line 12, column 67.
+`define ASSERT(__name, __prop, __clk = `ASSERT_DEFAULT_CLK, __rst = `ASSERT_DEFAULT_RST)
+                                                         |
+Error   : Reference to undefined macro. [VLOGPT-631] [read_hdl]
+        : Macro 'ASSERT_DEFAULT_CLK' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/prim_assert_dummy_macros.svh' on line 14, column 58.
+`define ASSERT_DEFAULT_CLK clk_i
+                               |
+Warning : Redefinition of macro. [VLOGPT-647]
+        : Macro 'ASSERT_DEFAULT_CLK' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/prim_assert.sv' on line 29, column 32.
+        : The latest definition of the macro will be used.
+`define ASSERT_DEFAULT_RST !rst_ni
+                                 |
+Warning : Redefinition of macro. [VLOGPT-647]
+        : Macro 'ASSERT_DEFAULT_RST' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/prim_assert.sv' on line 30, column 34.
+package ibex_pkg;
+                |
+Warning : Ignoring duplicate package definition. [VLOGPT-601]
+        : Ignoring definition of package 'ibex_pkg' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_pkg.sv' on line 9, column 17.
+module ibex_alu #(
+              |
+Warning : Replacing previously read Verilog description. [VLOGPT-6]
+        : Replacing Verilog description 'ibex_alu' with Verilog module in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_alu.sv' on line 14, column 15.
+          assign lrotc_stage[stg][2*`_N(stg)*(seg+1)-1 : 2*`_N(stg)*seg] =
+                                           |
+Error   : Parsing error. [VLOGPT-1] [read_hdl]
+        : in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_alu.sv' on line 1123, column 44.
+          assign lrotc_stage[stg][2*`_N(stg)*(seg+1)-1 : 2*`_N(stg)*seg] =
+                                   |
+Error   : Bad argument for operator. [VLOGPT-117] [read_hdl]
+        : in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_alu.sv' on line 1123, column 36.
+        : Illegal Verilog syntax is encountered.
+          assign lrotc_stage[stg][2*`_N(stg)*(seg+1)-1 : 2*`_N(stg)*seg] =
+                                            |
+Error   : Bad argument for operator. [VLOGPT-117] [read_hdl]
+        : in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_alu.sv' on line 1123, column 45.
+          assign lrotc_stage[stg][2*`_N(stg)*(seg+1)-1 : 2*`_N(stg)*seg] =
+                                                    |
+Error   : Bad argument for operator. [VLOGPT-117] [read_hdl]
+        : in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_alu.sv' on line 1123, column 53.
+          assign lrotc_stage[stg][2*`_N(stg)*(seg+1)-1 : 2*`_N(stg)*seg] =
+                                                                  |
+Error   : Parsing error. [VLOGPT-1] [read_hdl]
+        : in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_alu.sv' on line 1123, column 67.
+          assign lrotc_stage[stg][2*`_N(stg)*(seg+1)-1 : 2*`_N(stg)*seg] =
+                                                          |
+Error   : Bad argument for operator. [VLOGPT-117] [read_hdl]
+        : in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_alu.sv' on line 1123, column 59.
+          assign lrotc_stage[stg][2*`_N(stg)*(seg+1)-1 : 2*`_N(stg)*seg] =
+                                                                   |
+Error   : Bad argument for operator. [VLOGPT-117] [read_hdl]
+        : in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_alu.sv' on line 1123, column 68.
+              {{`_N(stg){1'b0}},{`_N(stg){1'b1}}} <<
+                       |
+Error   : Parsing error. [VLOGPT-1] [read_hdl]
+        : in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_alu.sv' on line 1124, column 24.
+              {{`_N(stg){1'b0}},{`_N(stg){1'b1}}} <<
+                                        |
+Error   : Parsing error. [VLOGPT-1] [read_hdl]
+        : in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_alu.sv' on line 1124, column 41.
+                bitcnt_partial_q[`_N(stg)*(2*seg+1)-1][$clog2(`_N(stg)):0];
+                                        |
+Error   : Parsing error. [VLOGPT-1] [read_hdl]
+        : in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_alu.sv' on line 1125, column 41.
+                bitcnt_partial_q[`_N(stg)*(2*seg+1)-1][$clog2(`_N(stg)):0];
+                                         |
+Error   : Bad argument for operator. [VLOGPT-117] [read_hdl]
+        : in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_alu.sv' on line 1125, column 42.
+                bitcnt_partial_q[`_N(stg)*(2*seg+1)-1][$clog2(`_N(stg)):0];
+                                                   |
+Error   : Bad argument for operator. [VLOGPT-117] [read_hdl]
+        : in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_alu.sv' on line 1125, column 52.
+                bitcnt_partial_q[`_N(stg)*(2*seg+1)-1][$clog2(`_N(stg)):0];
+                                                                      |
+Error   : Parsing error. [VLOGPT-1] [read_hdl]
+        : Expecting token ']', found ')' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_alu.sv' on line 1125, column 71.
+                bitcnt_partial_q[`_N(stg)*(2*seg+1)-1][$clog2(`_N(stg)):0];
+                                                       |
+Error   : Invalid expression. [VLOGPT-90] [read_hdl]
+        : in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_alu.sv' on line 1125, column 56.
+        : Invalid Verilog syntax is encountered.
+                bitcnt_partial_q[`_N(stg)*(2*seg+1)-1][$clog2(`_N(stg)):0];
+                                                                      |
+Error   : Parsing error. [VLOGPT-1] [read_hdl]
+        : Expecting token ';', found ')' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_alu.sv' on line 1125, column 71.
+          assign butterfly_mask_l[stg][`_N(stg)*(2*seg+2)-1 : `_N(stg)*(2*seg+1)]
+                                              |
+Error   : Parsing error. [VLOGPT-1] [read_hdl]
+        : in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_alu.sv' on line 1127, column 47.
+          assign butterfly_mask_l[stg][`_N(stg)*(2*seg+2)-1 : `_N(stg)*(2*seg+1)]
+                                               |
+Error   : Bad argument for operator. [VLOGPT-117] [read_hdl]
+        : in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_alu.sv' on line 1127, column 48.
+          assign butterfly_mask_l[stg][`_N(stg)*(2*seg+2)-1 : `_N(stg)*(2*seg+1)]
+                                                         |
+Error   : Bad argument for operator. [VLOGPT-117] [read_hdl]
+        : in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_alu.sv' on line 1127, column 58.
+          assign butterfly_mask_l[stg][`_N(stg)*(2*seg+2)-1 : `_N(stg)*(2*seg+1)]
+                                                                       |
+Error   : Parsing error. [VLOGPT-1] [read_hdl]
+        : Expecting token ';', found '(' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_alu.sv' on line 1127, column 72.
+          assign butterfly_mask_r[stg][`_N(stg)*(2*seg+1)-1 : `_N(stg)*(2*seg)]
+                                |
+Error   : Parsing error. [VLOGPT-1] [read_hdl]
+        : Expecting token ';', found '<identifier>' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_alu.sv' on line 1130, column 33.
+Warning : Maximum message print count reached. [MESG-11]
+        : Maximum print count of '20' reached for message 'VLOGPT-1'.
+%DLS-W-ConstraintWarn, UnitSpecifier Node will violate List constraint 'Symbol'; in AddLast.
+1
+@genus:root: 9> man VLOGPT-601
+@genus:root: 10> 
+@genus:root: 10> 
+@genus:root: 10> read_hdl -language sv $my_verilog_files
+`define ASSERT_AT_RESET(__name, __prop, __rst = `ASSERT_DEFAULT_RST)
+                                                                  |
+Error   : Reference to undefined macro. [VLOGPT-631] [read_hdl]
+        : Macro 'ASSERT_DEFAULT_RST' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/prim_assert_dummy_macros.svh' on line 12, column 67.
+`define ASSERT(__name, __prop, __clk = `ASSERT_DEFAULT_CLK, __rst = `ASSERT_DEFAULT_RST)
+                                                         |
+Error   : Reference to undefined macro. [VLOGPT-631] [read_hdl]
+        : Macro 'ASSERT_DEFAULT_CLK' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/prim_assert_dummy_macros.svh' on line 14, column 58.
+`define ASSERT_DEFAULT_CLK clk_i
+                               |
+Warning : Redefinition of macro. [VLOGPT-647]
+        : Macro 'ASSERT_DEFAULT_CLK' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/prim_assert.sv' on line 29, column 32.
+`define ASSERT_DEFAULT_RST !rst_ni
+                                 |
+Warning : Redefinition of macro. [VLOGPT-647]
+        : Macro 'ASSERT_DEFAULT_RST' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/prim_assert.sv' on line 30, column 34.
+package ibex_pkg;
+                |
+Warning : Ignoring duplicate package definition. [VLOGPT-601]
+        : Ignoring definition of package 'ibex_pkg' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_pkg.sv' on line 9, column 17.
+          assign lrotc_stage[stg][2*`_N(stg)*(seg+1)-1 : 2*`_N(stg)*seg] =
+                                   |
+Error   : Bad argument for operator. [VLOGPT-117] [read_hdl]
+        : in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_alu.sv' on line 1123, column 36.
+          assign lrotc_stage[stg][2*`_N(stg)*(seg+1)-1 : 2*`_N(stg)*seg] =
+                                            |
+Error   : Bad argument for operator. [VLOGPT-117] [read_hdl]
+        : in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_alu.sv' on line 1123, column 45.
+          assign lrotc_stage[stg][2*`_N(stg)*(seg+1)-1 : 2*`_N(stg)*seg] =
+                                                    |
+Error   : Bad argument for operator. [VLOGPT-117] [read_hdl]
+        : in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_alu.sv' on line 1123, column 53.
+          assign lrotc_stage[stg][2*`_N(stg)*(seg+1)-1 : 2*`_N(stg)*seg] =
+                                                          |
+Error   : Bad argument for operator. [VLOGPT-117] [read_hdl]
+        : in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_alu.sv' on line 1123, column 59.
+          assign lrotc_stage[stg][2*`_N(stg)*(seg+1)-1 : 2*`_N(stg)*seg] =
+                                                                   |
+Error   : Bad argument for operator. [VLOGPT-117] [read_hdl]
+        : in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_alu.sv' on line 1123, column 68.
+                bitcnt_partial_q[`_N(stg)*(2*seg+1)-1][$clog2(`_N(stg)):0];
+                                         |
+Error   : Bad argument for operator. [VLOGPT-117] [read_hdl]
+        : in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_alu.sv' on line 1125, column 42.
+                bitcnt_partial_q[`_N(stg)*(2*seg+1)-1][$clog2(`_N(stg)):0];
+                                                   |
+Error   : Bad argument for operator. [VLOGPT-117] [read_hdl]
+        : in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_alu.sv' on line 1125, column 52.
+                bitcnt_partial_q[`_N(stg)*(2*seg+1)-1][$clog2(`_N(stg)):0];
+                                                       |
+Error   : Invalid expression. [VLOGPT-90] [read_hdl]
+        : in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_alu.sv' on line 1125, column 56.
+          assign butterfly_mask_l[stg][`_N(stg)*(2*seg+2)-1 : `_N(stg)*(2*seg+1)]
+                                               |
+Error   : Bad argument for operator. [VLOGPT-117] [read_hdl]
+        : in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_alu.sv' on line 1127, column 48.
+          assign butterfly_mask_l[stg][`_N(stg)*(2*seg+2)-1 : `_N(stg)*(2*seg+1)]
+                                                         |
+Error   : Bad argument for operator. [VLOGPT-117] [read_hdl]
+        : in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_alu.sv' on line 1127, column 58.
+1
+@genus:root: 11> read_hdl -language sv $my_verilog_files
+package ibex_pkg;
+                |
+Warning : Ignoring duplicate package definition. [VLOGPT-601]
+        : Ignoring definition of package 'ibex_pkg' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_pkg.sv' on line 9, column 17.
+package ibex_pkg;
+                |
+Warning : Ignoring duplicate package definition. [VLOGPT-601]
+        : Ignoring definition of package 'ibex_pkg' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_pkg.sv' on line 9, column 17.
+module ibex_branch_predict (
+                         |
+Warning : Replacing previously read Verilog description. [VLOGPT-6]
+        : Replacing Verilog description 'ibex_branch_predict' with Verilog module in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_branch_predict.sv' on line 22, column 26.
+package ibex_pkg;
+                |
+Warning : Ignoring duplicate package definition. [VLOGPT-601]
+        : Ignoring definition of package 'ibex_pkg' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_pkg.sv' on line 9, column 17.
+module ibex_compressed_decoder (
+                             |
+Warning : Replacing previously read Verilog description. [VLOGPT-6]
+        : Replacing Verilog description 'ibex_compressed_decoder' with Verilog module in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_compressed_decoder.sv' on line 18, column 30.
+  `DV_FCOV_SIGNAL(logic, debug_wakeup, (ctrl_fsm_cs == SLEEP) & (ctrl_fsm_ns == FIRST_FETCH) &
+                |
+Error   : Reference to undefined macro. [VLOGPT-631] [read_hdl]
+        : Macro 'DV_FCOV_SIGNAL' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_controller.sv' on line 904, column 17.
+Warning : Replacing previously read Verilog module or VHDL entity. [HPT-76]
+        : Replacing Verilog module 'ibex_branch_predict' in library 'default' with newly read Verilog module 'ibex_branch_predict' in the same library in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_branch_predict.sv' on line 22.
+Warning : Replacing previously read Verilog module or VHDL entity. [HPT-76]
+        : Replacing Verilog module 'ibex_compressed_decoder' in library 'default' with newly read Verilog module 'ibex_compressed_decoder' in the same library in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_compressed_decoder.sv' on line 18.
+1
+@genus:root: 12> read_hdl -language sv $my_verilog_files
+package ibex_pkg;
+                |
+Warning : Ignoring duplicate package definition. [VLOGPT-601]
+        : Ignoring definition of package 'ibex_pkg' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_pkg.sv' on line 9, column 17.
+module ibex_alu#(
+              |
+Warning : Replacing previously read Verilog description. [VLOGPT-6]
+        : Replacing Verilog description 'ibex_alu' with Verilog module in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_alu.sv' on line 14, column 15.
+package ibex_pkg;
+                |
+Warning : Ignoring duplicate package definition. [VLOGPT-601]
+        : Ignoring definition of package 'ibex_pkg' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_pkg.sv' on line 9, column 17.
+module ibex_branch_predict (
+                         |
+Warning : Replacing previously read Verilog description. [VLOGPT-6]
+        : Replacing Verilog description 'ibex_branch_predict' with Verilog module in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_branch_predict.sv' on line 22, column 26.
+package ibex_pkg;
+                |
+Warning : Ignoring duplicate package definition. [VLOGPT-601]
+        : Ignoring definition of package 'ibex_pkg' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_pkg.sv' on line 9, column 17.
+module ibex_compressed_decoder (
+                             |
+Warning : Replacing previously read Verilog description. [VLOGPT-6]
+        : Replacing Verilog description 'ibex_compressed_decoder' with Verilog module in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_compressed_decoder.sv' on line 18, column 30.
+  `DV_FCOV_SIGNAL(logic, debug_wakeup, (ctrl_fsm_cs == SLEEP) & (ctrl_fsm_ns == FIRST_FETCH) &
+                |
+Error   : Reference to undefined macro. [VLOGPT-631] [read_hdl]
+        : Macro 'DV_FCOV_SIGNAL' in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_controller.sv' on line 904, column 17.
+Warning : Replacing previously read Verilog module or VHDL entity. [HPT-76]
+        : Replacing Verilog module 'ibex_alu' in library 'default' with newly read Verilog module 'ibex_alu' in the same library in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_alu.sv' on line 14.
+Warning : Replacing previously read Verilog module or VHDL entity. [HPT-76]
+        : Replacing Verilog module 'ibex_branch_predict' in library 'default' with newly read Verilog module 'ibex_branch_predict' in the same library in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_branch_predict.sv' on line 22.
+Warning : Replacing previously read Verilog module or VHDL entity. [HPT-76]
+        : Replacing Verilog module 'ibex_compressed_decoder' in library 'default' with newly read Verilog module 'ibex_compressed_decoder' in the same library in file '/home/usr8/work_space/sky130_cds/synth/rtl_IBEX/ibex_compressed_decoder.sv' on line 18.
+1
+@genus:root: 13> source genus_script_IBEX.tcl
+Sourcing './genus_script_IBEX.tcl' (Wed Aug 21 17:40:08 +07 2024)...
+#@ Begin verbose source ./genus_script_IBEX.tcl
+@file(genus_script_IBEX.tcl) 2: set fd_sclib ../../sky130_fd_sc_hd/lib
+@file(genus_script_IBEX.tcl) 3: set osu_t18lib ../../sky130_osu_sc_t18/18T_hs/lib
+@file(genus_script_IBEX.tcl) 4: set osu_t12lib ../../sky130_osu_sc_t12/12T_hs/lib
+@file(genus_script_IBEX.tcl) 5: set_db init_lib_search_path [list $fd_sclib $osu_t18lib $osu_t12lib]
+Warning : Cannot modify library search path after reading library(s). [TUI-83]
+        : Cannot modify 'init_lib_search_path' attribute to '../../sky130_fd_sc_hd/lib ../../sky130_osu_sc_t18/18T_hs/lib ../../sky130_osu_sc_t12/12T_hs/lib'
+        : You must set the 'init_lib_search_path' attribute before you set the 'library' attribute.
+  Setting attribute of root '/': 'init_lib_search_path' = ../../sky130_fd_sc_hd/lib ../../sky130_osu_sc_t18/18T_hs/lib ../../sky130_osu_sc_t12/12T_hs/lib
+@file(genus_script_IBEX.tcl) 7: set search_path [list "./" ]
+@file(genus_script_IBEX.tcl) 8: lappend search_path $fd_sclib
+@file(genus_script_IBEX.tcl) 9: lappend search_path $osu_t18lib 
+@file(genus_script_IBEX.tcl) 10: lappend search_path $osu_t12lib 
+@file(genus_script_IBEX.tcl) 11: lappend search_path /home/usr8/work_space/sky130_cds/synth/rtl_IBEX
+@file(genus_script_IBEX.tcl) 13: set_db init_hdl_search_path $search_path
+  Setting attribute of root '/': 'init_hdl_search_path' = ./ ../../sky130_fd_sc_hd/lib ../../sky130_osu_sc_t18/18T_hs/lib ../../sky130_osu_sc_t12/12T_hs/lib /home/usr8/work_space/sky130_cds/synth/rtl_IBEX
+@file(genus_script_IBEX.tcl) 16: read_libs [list sky130_fd_sc_hd__tt_100C_1v80.lib sky130_osu_sc_18T_hs_tt_1P80_100C.ccs.lib]
+#@ End verbose source ./genus_script_IBEX.tcl
+Cannot use read_libs after read_mmmc
+@genus:root: 14> exit
+
+Lic Summary:
+[17:40:35.003427] Cdslmd servers: vm-fsemi-edu02-h4l0gt0b
+[17:40:35.003451] Feature usage summary:
+[17:40:35.003456] Genus_Synthesis
+
+Normal exit.
