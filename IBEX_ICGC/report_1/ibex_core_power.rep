@@ -1,0 +1,26 @@
+Warning: Library 'sky130_fd_sc_hd__tt_100C_1v80' found in multiple domains.
+Info: Use -domain to uniquify.
+Info: Selecting library 'sky130_fd_sc_hd__tt_100C_1v80' in domain '-1'
+Warning: Library 'sky130_osu_sc_18T_hs_tt_1P80_100C.ccs' found in multiple domains.
+Info: Use -domain to uniquify.
+Info: Selecting library 'sky130_osu_sc_18T_hs_tt_1P80_100C.ccs' in domain '-1'
+Info    : Joules engine is used. [RPT-16]
+        : Joules engine is being used for the command report_power.
+Instance: /ibex_core
+Power Unit: W
+PDB Frames: /stim#0/frame#0
+  -------------------------------------------------------------------------
+    Category         Leakage     Internal    Switching        Total    Row%
+  -------------------------------------------------------------------------
+      memory     0.00000e+00  0.00000e+00  0.00000e+00  0.00000e+00   0.00%
+    register     4.44648e-06  2.15072e-03  3.37484e-04  2.49265e-03  17.18%
+       latch     0.00000e+00  0.00000e+00  0.00000e+00  0.00000e+00   0.00%
+       logic     8.99288e-06  4.72239e-03  6.50377e-03  1.12352e-02  77.42%
+        bbox     0.00000e+00  0.00000e+00  0.00000e+00  0.00000e+00   0.00%
+       clock     1.35822e-07  3.42240e-04  4.42411e-04  7.84787e-04   5.41%
+         pad     0.00000e+00  0.00000e+00  0.00000e+00  0.00000e+00   0.00%
+          pm     0.00000e+00  0.00000e+00  0.00000e+00  0.00000e+00   0.00%
+  -------------------------------------------------------------------------
+    Subtotal     1.35752e-05  7.21535e-03  7.28367e-03  1.45126e-02 100.01%
+  Percentage           0.09%       49.72%       50.19%      100.00% 100.00%
+  -------------------------------------------------------------------------
