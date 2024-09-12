@@ -483,11 +483,11 @@ module ibex_demo_system #(
       .host_r_valid_i(host_rvalid[DbgHost]),
       .host_r_rdata_i(host_rdata[DbgHost]),
 
-      .tck_i(tck_i),
-      .tms_i(tms_i),
-      .trst_ni(trst_ni),
-      .td_i(td_i),
-      .td_o(td_o)
+      .tck_i,
+      .tms_i,
+      .trst_ni,
+      .td_i,
+      .td_o
     );
   end else begin : gen_no_dm
     assign dm_debug_req = 1'b0;
